@@ -1,6 +1,6 @@
 {
-  "name": "@ma9pie/ui-kit",
-  "version": "0.0.1",
+  "name": "@lite-ui/react",
+  "version": "0.0.0",
   "description": "React UI library",
   "keywords": [
     "react",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ma9pie/ui-kit"
+    "url": "https://github.com/ma9pie/lite-ui"
   },
   "license": "MIT",
   "publishConfig": {
