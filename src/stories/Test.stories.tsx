@@ -1,10 +1,10 @@
 import type { Meta } from '@storybook/react';
 import React from 'react';
 
-import Button from '@/components/common/Button';
+import { Test } from '@/components';
 
 const meta = {
-  title: 'Components/Button',
+  title: 'Components/Test',
   parameters: {},
   argTypes: {},
 } satisfies Meta;
@@ -12,9 +12,9 @@ const meta = {
 export default meta;
 
 const App = () => {
-  return <Button></Button>;
+  return <Test></Test>;
 };
 
-export const Button_ = {
+export const Test_ = {
   render: () => <App></App>,
 };
