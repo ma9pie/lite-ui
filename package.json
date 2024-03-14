@@ -36,21 +36,18 @@
     "major": "npm version major"
   },
   "peerDependencies": {
-    "@emotion/css": ">=11",
-    "@emotion/react": ">=11",
-    "@emotion/styled": ">=11",
     "react": ">=18",
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@emotion/css": ">=11",
-    "@emotion/react": ">=11",
-    "@emotion/styled": ">=11",
     "react": ">=18",
     "react-dom": ">=18"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.11.0",
+    "@emotion/css": "^11.11.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -67,8 +64,10 @@
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.21",
     "@types/react": "^18",
+    "autoprefixer": "^10.4.18",
     "babel-jest": "^29.7.0",
     "babel-plugin-macros": "^3.1.0",
+    "classnames": "^2.5.1",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.1.2",
     "eslint-plugin-simple-import-sort": "^12.0.0",
