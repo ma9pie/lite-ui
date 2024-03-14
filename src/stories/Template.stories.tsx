@@ -1,20 +1,18 @@
 import type { Meta } from '@storybook/react';
 import React from 'react';
 
-import { Test } from '@/components';
-
 const meta = {
-  title: 'Components/Test',
+  title: 'Template',
   parameters: {},
   argTypes: {},
 } satisfies Meta;
 
 export default meta;
 
-const App = () => {
-  return <Test></Test>;
+const Page = () => {
+  return <div>Template</div>;
 };
 
-export const Test_ = {
-  render: () => <App></App>,
+export const Template_ = {
+  render: Page,
 };
