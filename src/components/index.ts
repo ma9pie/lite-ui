@@ -1,2 +1,2 @@
-export { default as Test } from './common/Test';
-export { default as Flex } from './common/Flex';
+export { default as Flex } from './Flex';
+export { default as Grid } from './Grid';

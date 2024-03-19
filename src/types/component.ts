@@ -1,19 +1,27 @@
 import { CSSProperties, ReactNode } from 'react';
 
 export type JustifyContent = 'start' | 'end' | 'center' | 'between' | 'evenly';
-
 export type AlignItem = 'start' | 'end' | 'center';
 export type Wrap = 'wrap' | 'wrap-reverse' | 'nowrap';
 
-export interface FlexProps {
+export interface DefaultProps {
   key?: string;
   className?: string;
   style?: CSSProperties;
+  children?: ReactNode;
+}
+export interface FlexProps extends DefaultProps {
   flex?: number;
   wrap?: Wrap;
   col?: boolean;
   gap?: number | string;
   justify?: JustifyContent;
   items?: AlignItem;
-  children?: ReactNode;
+}
+export interface GridProps extends DefaultProps {
+  row?: number;
+  col?: number;
+  gap?: number;
+  justify?: JustifyContent;
+  items?: AlignItem;
 }
