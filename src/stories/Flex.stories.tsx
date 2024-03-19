@@ -3,32 +3,34 @@ import React from 'react';
 import tw, { styled } from 'twin.macro';
 
 import { Flex } from '@/components';
+import { FlexProps } from '@/types';
 
 const meta = {
   title: 'Flex',
-  parameters: {},
-  argTypes: {},
+  args: {
+    className: 'w-64 h-64 border-black',
+    wrap: false,
+    col: false,
+    gap: 8,
+  },
+  component: Flex,
 } satisfies Meta;
 
 export default meta;
 
-const Page = () => {
+const Component = (props: FlexProps) => {
   return (
-    <div>
-      <Flex gap={8}>
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
-      </Flex>
-    </div>
+    <Flex {...props}>
+      <Box></Box>
+      <Box></Box>
+      <Box></Box>
+      <Box></Box>
+    </Flex>
   );
 };
 
 export const Flex_ = {
-  render: Page,
+  render: Component,
 };
 
 const Box = styled.div`
