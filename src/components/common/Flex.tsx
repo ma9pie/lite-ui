@@ -1,70 +1,42 @@
+import styled from '@emotion/styled';
 import React from 'react';
-import tw, { styled } from 'twin.macro';
 
-import { AlignItem, FlexProps, JustifyContent } from '@/types';
+import { FlexProps } from '@/types';
 
-const Flex = ({
-  key,
-  className,
-  flex,
-  wrap,
-  col,
-  gap,
-  justify,
-  items,
-  children,
-}: FlexProps) => {
-  return (
-    <Wrapper
-      key={key}
-      className={className}
-      style={{
-        flex: flex,
-        gap: gap,
-      }}
-      col={col}
-      $wrap={wrap}
-      justify={justify}
-      items={items}
-    >
-      {children}
-    </Wrapper>
-  );
+const Flex = ({ children, ...props }: FlexProps) => {
+  return <Wrapper {...props}>{children}</Wrapper>;
 };
 
 export default Flex;
 
-const Wrapper = styled.div<{
-  col?: boolean;
-  $wrap?: boolean;
-  justify?: JustifyContent;
-  items?: AlignItem;
-}>`
-  ${tw`flex`};
-  ${(props) => props.col && tw`flex-col`};
-  ${(props) => props.$wrap && tw`flex-wrap`};
-  ${(props) => {
+const Wrapper = styled.div<FlexProps>`
+  display: flex;
+  flex-direction: ${(props) => (props.col ? 'column' : 'row')};
+  flex-wrap: ${(props) => props.wrap && 'wrap'};
+  flex: ${(props) => props.flex};
+  gap: ${(props) => `${props.gap}px`};
+  justify-content: ${(props) => {
     switch (props.justify) {
       case 'start':
-        return tw`justify-start`;
+        return 'flex-start';
       case 'end':
-        return tw`justify-end`;
+        return 'flex-end';
       case 'center':
-        return tw`justify-center`;
+        return 'center';
       case 'between':
-        return tw`justify-between`;
+        return 'space-between';
       case 'evenly':
-        return tw`justify-evenly`;
+        return 'space-evenly';
     }
   }};
-  ${(props) => {
+  align-items: ${(props) => {
     switch (props.items) {
       case 'start':
-        return tw`items-start`;
+        return 'flex-start';
       case 'end':
-        return tw`items-end`;
+        return 'flex-end';
       case 'center':
-        return tw`items-center`;
+        return 'center';
     }
   }};
 `;

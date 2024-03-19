@@ -24,7 +24,6 @@ const config = {
     babel({
       extensions,
       include: ['src/**/*'],
-      babelHelpers: 'runtime',
     }),
     url(),
     svgr(),

@@ -1,6 +1,6 @@
+import styled from '@emotion/styled';
 import type { Meta } from '@storybook/react';
 import React from 'react';
-import tw, { styled } from 'twin.macro';
 
 import { Flex } from '@/components';
 import { FlexProps } from '@/types';
@@ -8,8 +8,11 @@ import { FlexProps } from '@/types';
 const meta = {
   title: 'Flex',
   args: {
-    className: 'w-64 h-64 border-black',
-    wrap: false,
+    className: 'border-black',
+    style: {
+      width: 256,
+      height: 256,
+    },
     col: false,
     gap: 8,
   },
@@ -34,5 +37,7 @@ export const Flex_ = {
 };
 
 const Box = styled.div`
-  ${tw`w-6 h-6 bg-neutral-500`};
+  width: 24px;
+  height: 24px;
+  background-color: gray;
 `;
