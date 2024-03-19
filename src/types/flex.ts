@@ -1,16 +1,8 @@
 import { ReactNode } from 'react';
 
-export type JustifyContent =
-  | 'normal'
-  | 'start'
-  | 'end'
-  | 'center'
-  | 'between'
-  | 'around'
-  | 'evenly'
-  | 'stretch';
+export type JustifyContent = 'start' | 'end' | 'center' | 'between' | 'evenly';
 
-export type AlignItem = 'start' | 'end' | 'center' | 'baseline' | 'stretch';
+export type AlignItem = 'start' | 'end' | 'center';
 
 export interface FlexProps {
   key?: string;
