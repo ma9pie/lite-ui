@@ -15,7 +15,7 @@ const Wrapper = styled.div<FlexProps>`
   flex-direction: ${({ col }) => (col ? 'column' : 'row')};
   flex-wrap: ${({ wrap }) => wrap && 'wrap'};
   flex: ${({ flex }) => flex};
-  gap: ${({ gap }) => `${gap}px`};
+  gap: ${({ gap }) => gap && `${gap}px`};
   justify-content: ${({ justify }) => justifyContent(justify)};
   align-items: ${({ items }) => alignItem(items)};
 `;

@@ -15,7 +15,7 @@ const Wrapper = styled.div<GridProps>`
   grid-template-rows: ${({ row }) => row && `repeat(${row}, minmax(0, 1fr))`};
   grid-template-columns: ${({ col }) =>
     col && `repeat(${col}, minmax(0, 1fr))`};
-  gap: ${({ gap }) => `${gap}px`};
+  gap: ${({ gap }) => gap && `${gap}px`};
   justify-content: ${({ justify }) => justifyContent(justify)};
   align-items: ${({ items }) => alignItem(items)};
 `;
