@@ -1,37 +1,40 @@
 import type { Meta } from '@storybook/react';
 import React from 'react';
 
-import { Flex } from '@/components';
+import { Grid } from '@/components';
 import { Box } from '@/components/test';
-import { FlexProps } from '@/types';
+import { GridProps } from '@/types';
 
 const meta = {
-  title: 'Flex',
+  title: 'Grid',
   args: {
     className: 'border-black',
     style: {
       width: 256,
       height: 256,
     },
-    col: false,
+    row: 2,
+    col: 2,
     gap: 8,
   },
-  component: Flex,
+  component: Grid,
 } satisfies Meta;
 
 export default meta;
 
-const Component = (props: FlexProps) => {
+const Component = (props: GridProps) => {
   return (
-    <Flex {...props}>
+    <Grid {...props}>
       <Box></Box>
       <Box></Box>
       <Box></Box>
       <Box></Box>
-    </Flex>
+      <Box></Box>
+      <Box></Box>
+    </Grid>
   );
 };
 
-export const Flex_ = {
+export const Grid_ = {
   render: Component,
 };
