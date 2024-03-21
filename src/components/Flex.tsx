@@ -12,10 +12,10 @@ export default Flex;
 
 const Wrapper = styled.div<FlexProps>`
   display: flex;
-  flex-direction: ${(props) => (props.col ? 'column' : 'row')};
-  flex-wrap: ${(props) => props.wrap && 'wrap'};
-  flex: ${(props) => props.flex};
-  gap: ${(props) => `${props.gap}px`};
-  justify-content: ${(props) => justifyContent(props.justify)};
-  align-items: ${(props) => alignItem(props.items)};
+  flex-direction: ${({ col }) => (col ? 'column' : 'row')};
+  flex-wrap: ${({ wrap }) => wrap && 'wrap'};
+  flex: ${({ flex }) => flex};
+  gap: ${({ gap }) => `${gap}px`};
+  justify-content: ${({ justify }) => justifyContent(justify)};
+  align-items: ${({ items }) => alignItem(items)};
 `;

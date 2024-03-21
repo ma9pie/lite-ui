@@ -12,9 +12,10 @@ export default Grid;
 
 const Wrapper = styled.div<GridProps>`
   display: grid;
-  grid-template-rows: ${(props) => `repeat(${props.row}, minmax(0, 1fr))`};
-  grid-template-columns: ${(props) => `repeat(${props.col}, minmax(0, 1fr))`};
-  gap: ${(props) => `${props.gap}px`};
-  justify-content: ${(props) => justifyContent(props.justify)};
-  align-items: ${(props) => alignItem(props.items)};
+  grid-template-rows: ${({ row }) => row && `repeat(${row}, minmax(0, 1fr))`};
+  grid-template-columns: ${({ col }) =>
+    col && `repeat(${col}, minmax(0, 1fr))`};
+  gap: ${({ gap }) => `${gap}px`};
+  justify-content: ${({ justify }) => justifyContent(justify)};
+  align-items: ${({ items }) => alignItem(items)};
 `;
