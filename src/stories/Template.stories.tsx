@@ -9,10 +9,10 @@ const meta = {
 
 export default meta;
 
-const Page = () => {
+const Component = () => {
   return <div>Template</div>;
 };
 
 export const Template_ = {
-  render: Page,
+  render: Component,
 };

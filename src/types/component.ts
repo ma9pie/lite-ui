@@ -25,3 +25,10 @@ export interface GridProps extends DefaultProps {
   justify?: JustifyContent;
   items?: AlignItem;
 }
+export interface DividerProps extends DefaultProps {
+  y?: number;
+  size?: number;
+  color?: string;
+  dashed?: boolean;
+  strokeDasharray?: number | string;
+}
