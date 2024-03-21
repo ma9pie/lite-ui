@@ -12,8 +12,6 @@ export const justifyContent = (value?: JustifyContent) => {
       return 'space-between';
     case 'evenly':
       return 'space-evenly';
-    default:
-      return '';
   }
 };
 
@@ -25,7 +23,5 @@ export const alignItem = (value?: AlignItem) => {
       return 'flex-end';
     case 'center':
       return 'center';
-    default:
-      return '';
   }
 };
