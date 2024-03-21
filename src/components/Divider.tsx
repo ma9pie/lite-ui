@@ -17,7 +17,7 @@ const Divider = ({
 
   useEffect(() => {
     updateWidth();
-  }, []);
+  }, [dashed]);
 
   const updateWidth = () => {
     if (!dashed || !ref.current) return;
