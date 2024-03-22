@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import useEventListener from '@/hooks/useEventListener';
 import { DividerProps } from '@/types';
@@ -15,14 +15,14 @@ const Divider = ({
   const ref = useRef<HTMLHRElement>(null);
   const [width, setWidth] = useState(0);
 
-  useEffect(() => {
-    updateWidth();
-  }, [dashed]);
-
-  const updateWidth = () => {
+  const updateWidth = useCallback(() => {
     if (!dashed || !ref.current) return;
     setWidth(ref.current.clientWidth);
-  };
+  }, [dashed]);
+
+  useEffect(() => {
+    updateWidth();
+  }, [dashed, updateWidth]);
 
   useEventListener('resize', updateWidth);
 
