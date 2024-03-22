@@ -8,7 +8,6 @@ export interface DefaultProps {
   key?: string;
   className?: string;
   style?: CSSProperties;
-  children?: ReactNode;
 }
 export interface FlexProps extends DefaultProps {
   flex?: number;
@@ -17,6 +16,7 @@ export interface FlexProps extends DefaultProps {
   gap?: number | string;
   justify?: JustifyContent;
   items?: AlignItem;
+  children?: ReactNode;
 }
 export interface GridProps extends DefaultProps {
   row?: number;
@@ -24,6 +24,7 @@ export interface GridProps extends DefaultProps {
   gap?: number;
   justify?: JustifyContent;
   items?: AlignItem;
+  children?: ReactNode;
 }
 export interface DividerProps extends DefaultProps {
   y?: number;
@@ -31,4 +32,8 @@ export interface DividerProps extends DefaultProps {
   color?: string;
   dashed?: boolean;
   strokeDasharray?: number | string;
+}
+export interface SpacerProps extends DefaultProps {
+  x?: number;
+  y?: number;
 }
