@@ -9,7 +9,7 @@ const Divider = ({
   size = 1,
   color = 'black',
   dashed,
-  strokeDasharray = 1,
+  strokeDasharray = 2,
   ...props
 }: DividerProps) => {
   const ref = useRef<HTMLHRElement>(null);

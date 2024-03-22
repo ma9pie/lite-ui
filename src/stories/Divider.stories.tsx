@@ -9,7 +9,8 @@ const meta = {
   args: {
     y: 0,
     size: 1,
-    strokeDasharray: 1,
+    dashed: false,
+    strokeDasharray: 2,
   },
   component: Divider,
 } satisfies Meta;
