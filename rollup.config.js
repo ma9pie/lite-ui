@@ -4,7 +4,10 @@ import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import url from '@rollup/plugin-url';
 import svgr from '@svgr/rollup';
+import autoprefixer from 'autoprefixer';
+import cssimport from 'postcss-import';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import postcss from 'rollup-plugin-postcss';
 
 import pkg from './package.json';
 
@@ -24,6 +27,9 @@ const config = {
     babel({
       extensions,
       include: ['src/**/*'],
+    }),
+    postcss({
+      plugins: [cssimport(), autoprefixer()],
     }),
     url(),
     svgr(),
