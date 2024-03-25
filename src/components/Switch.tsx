@@ -1,4 +1,3 @@
-import { css } from '@emotion/css';
 import styled from '@emotion/styled';
 import React, { useMemo, useState } from 'react';
 
@@ -11,6 +10,7 @@ const Switch = ({
   disabled = false,
   value,
   onChange = () => {},
+  ...props
 }: SwitchProps) => {
   const [localChecked, setLocalChecked] = useState(false);
 
@@ -31,7 +31,7 @@ const Switch = ({
 
   return (
     <Track
-      className={style}
+      {...props}
       checked={checked}
       size={size}
       padding={padding}
@@ -52,7 +52,19 @@ const Switch = ({
 
 export default Switch;
 
-const style = css`
+const Track = styled.div<TrackProps>`
+  position: relative;
+  width: ${({ size, padding }) => `${2 * (size - padding)}px`};
+  height: ${({ size }) => `${size}px`};
+  padding: ${({ padding }) => `${padding}px`};
+  border-radius: ${({ size }) => `${size}px`};
+  background-color: ${({ checked }) =>
+    checked ? 'var(--neutral600)' : ' var(--neutral300)'};
+  cursor: pointer;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: ${({ duration }) => `${duration}ms`};
+  pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')};
   @keyframes switch-checked {
     0% {
       transform: scaleX(100%);
@@ -83,20 +95,6 @@ const style = css`
     transform-origin: left;
     animation: switch-unchecked 0.2s ease-in-out forwards;
   }
-`;
-const Track = styled.div<TrackProps>`
-  position: relative;
-  width: ${({ size, padding }) => `${2 * (size - padding)}px`};
-  height: ${({ size }) => `${size}px`};
-  padding: ${({ padding }) => `${padding}px`};
-  border-radius: ${({ size }) => `${size}px`};
-  background-color: ${({ checked }) =>
-    checked ? 'var(--neutral600)' : ' var(--neutral300)'};
-  cursor: pointer;
-  transition-property: background-color;
-  transition-timing-function: ease-in-out;
-  transition-duration: ${({ duration }) => `${duration}ms`};
-  pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')};
 `;
 const Handle = styled.div<HandleProps>`
   position: absolute;
