@@ -25,6 +25,7 @@
     "/dist"
   ],
   "scripts": {
+    "dev": "npm --prefix ./web run dev",
     "prebuild": "rm -rf dist",
     "build": "rollup -c",
     "test": "jest",
