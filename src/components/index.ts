@@ -5,3 +5,4 @@ export { default as Divider } from './Divider';
 export { default as Spacer } from './Spacer';
 export { default as Switch } from './Switch';
 export { default as Spinner } from './Spinner';
+export { default as Alert } from './Alert';
