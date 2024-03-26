@@ -1,23 +1,29 @@
 import styled from '@emotion/styled';
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 import { HandleProps, SwitchProps, TrackProps } from '@/types';
 
 const Switch = ({
+  defaultChecked = false,
   size = 32,
   trackPadding = 4,
   duration = 150,
   disabled = false,
-  value,
   onChange = () => {},
   ...props
 }: SwitchProps) => {
-  const [localChecked, setLocalChecked] = useState(false);
+  const [mount, setMount] = useState(false);
+  const [checked, setChecked] = useState(defaultChecked);
+  const [handleClassName, setHandleClassName] = useState('');
 
-  const checked = useMemo(
-    () => (value == undefined ? localChecked : value),
-    [value, localChecked]
-  );
+  useEffect(() => {
+    if (!mount) {
+      return setMount(true);
+    }
+    const className = checked ? 'switch-checked' : 'switch-unchecked';
+    setHandleClassName(className);
+  }, [checked]);
+
   const padding = useMemo(
     () => (size > 2 * trackPadding ? trackPadding : size / 2),
     [size, trackPadding]
@@ -25,7 +31,7 @@ const Switch = ({
 
   const toggle = () => {
     const _checked = !checked;
-    setLocalChecked(_checked);
+    setChecked(_checked);
     onChange(_checked);
   };
 
@@ -40,7 +46,7 @@ const Switch = ({
       onClick={toggle}
     >
       <Handle
-        className={checked ? 'switch-checked' : 'switch-unchecked'}
+        className={handleClassName}
         checked={checked}
         size={size}
         padding={padding}

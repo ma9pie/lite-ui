@@ -7,6 +7,7 @@ import { SwitchProps } from '@/types';
 const meta = {
   title: 'Switch',
   args: {
+    defaultChecked: false,
     size: 32,
     trackPadding: 4,
     duration: 150,
@@ -24,7 +25,13 @@ const Component = (props: SwitchProps) => {
     setChecked(value);
   };
 
-  return <Switch {...props} value={checked} onChange={handleChange}></Switch>;
+  return (
+    <Switch
+      {...props}
+      defaultChecked={checked}
+      onChange={handleChange}
+    ></Switch>
+  );
 };
 
 export const Switch_ = {
