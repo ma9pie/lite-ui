@@ -1,11 +1,11 @@
 import { DefaultProps } from '@/types';
 
 export interface SwitchProps extends DefaultProps {
+  defaultChecked?: boolean;
   size?: number;
   trackPadding?: number;
   duration?: number;
   disabled?: boolean;
-  value?: boolean;
   onChange?: (value: boolean) => void;
 }
 
