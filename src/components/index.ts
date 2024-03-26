@@ -6,3 +6,4 @@ export { default as Spacer } from './Spacer';
 export { default as Switch } from './Switch';
 export { default as Spinner } from './Spinner';
 export { default as Alert } from './Alert';
+export { default as List } from './List';
