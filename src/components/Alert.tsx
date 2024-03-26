@@ -31,9 +31,9 @@ const Alert = ({
         };
       case 'warn':
         return {
-          iconColor: 'var(--yellow600)',
-          borderColor: 'var(--yellow200)',
-          backgroundColor: 'var(--yellow50)',
+          iconColor: 'var(--amber500)',
+          borderColor: 'var(--amber200)',
+          backgroundColor: 'var(--amber50)',
           icon: WarningSvg,
         };
       case 'error':
