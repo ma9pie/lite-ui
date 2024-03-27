@@ -7,3 +7,4 @@ export * from './switch';
 export * from './spinner';
 export * from './alert';
 export * from './list';
+export * from './chip';
