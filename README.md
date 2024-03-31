@@ -1,4 +1,4 @@
-#  Lite UI 🪶
+#  Lite UI
 
 [npm-url]: https://www.npmjs.com/package/@ma9pie/lite-ui
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
