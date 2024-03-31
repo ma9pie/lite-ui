@@ -8,3 +8,4 @@ export { default as Spinner } from './Spinner';
 export { default as Alert } from './Alert';
 export { default as List } from './List';
 export { default as Chip } from './Chip';
+export { default as Avatar } from './Avatar';
