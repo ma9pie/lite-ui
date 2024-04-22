@@ -11,6 +11,7 @@ export interface ButtonProps extends DefaultProps {
   radius?: ButtonRadius;
   color?: ButtonColor;
   disabled?: boolean;
+  disableRipple?: boolean;
   children?: ReactNode;
   onClick?: (...args: any) => void;
 }

@@ -4,6 +4,8 @@ import React from 'react';
 import { ButtonProps } from '@/types';
 import { getProperties } from '@/utils';
 
+import Ripple from './common/Ripple';
+
 const SIZE = {
   sm: {
     width: '64px',
@@ -36,13 +38,19 @@ const BACKGROUND_COLOR = {
   primary: 'var(--blue500)',
 };
 
-const Button = ({ ...props }: ButtonProps) => {
-  return <Wrapper {...props}></Wrapper>;
+const Button = ({ disableRipple, children, ...props }: ButtonProps) => {
+  return (
+    <Wrapper {...props}>
+      {children}
+      {!disableRipple && <Ripple></Ripple>}
+    </Wrapper>
+  );
 };
 
 export default Button;
 
 const Wrapper = styled.button<ButtonProps>`
+  position: relative;
   color: white;
   border: none;
   transition-property: all;
