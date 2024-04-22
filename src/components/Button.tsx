@@ -84,7 +84,7 @@ const Wrapper = styled.button<ButtonProps>`
     });
 
     return `
-    width: ${width};
+    width: ${props.full ? '100%' : width};
     height: ${height};
     border-radius: ${radius};
     padding: ${padding};

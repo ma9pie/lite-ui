@@ -71,6 +71,7 @@ const Container = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
+  border-radius: inherit;
 `;
 const Span = styled.div`
   @keyframes ripple {
@@ -88,4 +89,5 @@ const Span = styled.div`
   background-color: white;
   animation-name: ripple;
   animation-fill-mode: forwards;
+  pointer-events: none;
 `;
