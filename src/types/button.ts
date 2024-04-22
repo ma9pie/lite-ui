@@ -7,6 +7,7 @@ export type ButtonRadius = 'none' | 'sm' | 'md' | 'lg' | 'full';
 export type ButtonColor = 'default' | 'primary';
 
 export interface ButtonProps extends DefaultProps {
+  full?: boolean;
   size?: ButtonSize;
   radius?: ButtonRadius;
   color?: ButtonColor;
