@@ -9,3 +9,4 @@ export * from './alert';
 export * from './list';
 export * from './chip';
 export * from './avatar';
+export * from './button';
