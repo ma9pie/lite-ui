@@ -56,6 +56,7 @@ const Wrapper = styled.button<ButtonProps>`
   transition-property: all;
   transition-timing-function: ease;
   transition-duration: 0.25s;
+  overflow: hidden;
   cursor: pointer;
 
   &:active:not(:disabled) {
