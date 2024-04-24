@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { DefaultProps } from '@/types';
+import { DefaultProps } from './';
 
 export type ChipVariant = 'filled' | 'outlined';
 export type ChipSize = 'sm' | 'md' | 'lg';

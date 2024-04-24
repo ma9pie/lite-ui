@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-import { FlexProps } from '@/types';
 import { alignItem, justifyContent } from '@/utils';
+
+import { FlexProps } from '../types';
 
 const Flex = (props: FlexProps) => {
   return <Wrapper {...props}>{props.children}</Wrapper>;

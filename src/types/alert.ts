@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { DefaultProps } from '@/types';
+import { DefaultProps } from './';
 
 export type AlertStatus = 'success' | 'info' | 'warn' | 'error';
 
