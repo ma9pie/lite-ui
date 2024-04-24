@@ -3,19 +3,19 @@ import tw, { styled } from 'twin.macro';
 
 import HomeLayout from '@/components/layouts/HomeLayout';
 
-const NotFound = () => {
+const Custom404 = () => {
   return (
     <HomeLayout>
       <Container>
         <NumberText>404</NumberText>
         <VerticalLine></VerticalLine>
-        <Text>This page could not be found.</Text>
+        <Text>Page not found.</Text>
       </Container>
     </HomeLayout>
   );
 };
 
-export default NotFound;
+export default Custom404;
 
 const Container = styled.div`
   ${tw`flex-1 flex justify-center items-center gap-4`};
