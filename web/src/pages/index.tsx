@@ -1,9 +1,9 @@
 import React from 'react';
 
-import PreparingToLaunchPage from '@/components/PreparingToLaunchPage';
+import HomeLayout from '@/components/layouts/HomeLayout';
 
 const Home = () => {
-  return <PreparingToLaunchPage></PreparingToLaunchPage>;
+  return <HomeLayout></HomeLayout>;
 };
 
 export default Home;
