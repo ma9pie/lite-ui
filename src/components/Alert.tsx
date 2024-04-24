@@ -1,11 +1,13 @@
 import styled from '@emotion/styled';
 import React, { useMemo } from 'react';
-import { AiOutlineInfoCircle as InfoSvg } from 'react-icons/ai';
-import { AiOutlineCheckCircle as SuccessSvg } from 'react-icons/ai';
-import { AiOutlineWarning as WarningSvg } from 'react-icons/ai';
-import { AiOutlineCloseCircle as ErrorSvg } from 'react-icons/ai';
+import {
+  AiOutlineCheckCircle as SuccessSvg,
+  AiOutlineCloseCircle as ErrorSvg,
+  AiOutlineInfoCircle as InfoSvg,
+  AiOutlineWarning as WarningSvg,
+} from 'react-icons/ai';
 
-import { AlertProps } from '@/types';
+import { AlertProps } from '../types';
 
 const Alert = ({
   status = 'success',

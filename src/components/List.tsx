@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-import { ListProps, ListTreeNode } from '@/types';
+import { ListProps, ListTreeNode } from '../types';
 
 const List = ({ list, tabWidth = 24, gap = 8 }: ListProps) => {
   const generateNestedList = (data?: ListTreeNode[]) => {

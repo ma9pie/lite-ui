@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { DefaultProps } from '@/types';
+import { DefaultProps } from './';
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
 export type ButtonRadius = 'none' | 'sm' | 'md' | 'lg' | 'full';

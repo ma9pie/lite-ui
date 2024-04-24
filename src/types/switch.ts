@@ -1,4 +1,4 @@
-import { DefaultProps } from '@/types';
+import { DefaultProps } from './';
 
 export interface SwitchProps extends DefaultProps {
   defaultChecked?: boolean;

@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-import { GridProps } from '@/types';
 import { alignItem, justifyContent } from '@/utils';
+
+import { GridProps } from '../types';
 
 const Grid = (props: GridProps) => {
   return <Wrapper {...props}>{props.children}</Wrapper>;

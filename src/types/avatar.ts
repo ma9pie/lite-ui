@@ -1,4 +1,4 @@
-import { DefaultProps } from '@/types';
+import { DefaultProps } from './';
 
 export type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 

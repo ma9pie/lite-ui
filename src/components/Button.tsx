@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-import { ButtonProps } from '@/types';
+import Ripple from '@/components/common/Ripple';
 import { getProperties } from '@/utils';
 
-import Ripple from './common/Ripple';
+import { ButtonProps } from '../types';
 
 const SIZE = {
   sm: {
