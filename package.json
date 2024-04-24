@@ -36,10 +36,6 @@
     "minor": "npm version minor",
     "major": "npm version major"
   },
-  "workspaces": [
-    "src/*",
-    "web/*"
-  ],
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
