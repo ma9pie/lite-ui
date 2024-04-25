@@ -1,4 +1,4 @@
-import { DefaultProps } from './';
+import { DefaultProps } from '@/types';
 
 export interface SpinnerProps extends DefaultProps {
   size?: number;

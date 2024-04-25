@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React, { useRef } from 'react';
 
-import { ChipProps } from '../types';
+import { ChipProps } from '@/types';
 
 const SIZE_MAP = {
   sm: { height: '24px', padding: '0px 8px', fontSize: '12px' },

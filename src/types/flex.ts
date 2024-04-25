@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { AlignItem, DefaultProps, JustifyContent, Wrap } from './';
+import { AlignItem, DefaultProps, JustifyContent, Wrap } from '@/types';
 
 export interface FlexProps extends DefaultProps {
   flex?: number;

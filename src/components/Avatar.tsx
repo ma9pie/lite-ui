@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React, { useMemo } from 'react';
 import { FaUser } from 'react-icons/fa';
 
-import { AvatarProps } from '../types';
+import { AvatarProps } from '@/types';
 
 const SIZE_MAP = {
   xs: '16px',

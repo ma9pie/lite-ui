@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React, { useEffect, useMemo, useState } from 'react';
 
-import { HandleProps, SwitchProps, TrackProps } from '../types';
+import { HandleProps, SwitchProps, TrackProps } from '@/types';
 
 const Switch = ({
   defaultChecked = false,

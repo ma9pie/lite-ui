@@ -8,6 +8,7 @@ import autoprefixer from 'autoprefixer';
 import cssimport from 'postcss-import';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
+import tscAlias from 'rollup-plugin-tsc-alias';
 
 import pkg from './package.json';
 
@@ -15,12 +16,25 @@ const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 const config = {
   input: './src/index.ts',
+  output: [
+    {
+      file: pkg.main,
+      format: 'cjs',
+      sourcemap: true,
+    },
+    {
+      file: pkg.module,
+      format: 'esm',
+      sourcemap: true,
+    },
+  ],
   plugins: [
     peerDepsExternal(),
     resolve({ extensions }),
     typescript({
       exclude: ['**/*.stories.tsx', '**/*.test.ts', '**/*.test.tsx'],
     }),
+    tscAlias(),
     commonjs({
       include: 'node_modules/**',
     }),
@@ -33,18 +47,6 @@ const config = {
     }),
     url(),
     svgr(),
-  ],
-  output: [
-    {
-      file: pkg.main,
-      format: 'cjs',
-      sourcemap: true,
-    },
-    {
-      file: pkg.module,
-      format: 'esm',
-      sourcemap: true,
-    },
   ],
 };
 
