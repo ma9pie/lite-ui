@@ -1,30 +1,16 @@
 import { Chip, Flex } from '@ma9pie/lite-ui';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { FaGithub } from 'react-icons/fa6';
 import { RiNpmjsLine } from 'react-icons/ri';
 import tw, { styled } from 'twin.macro';
 
 import Frame from '@/components/layouts/Frame';
-import {
-  LITE_UI_GIT_REPOSITORY_URL,
-  LITE_UI_NPM_REGISTRY_API_URL,
-  LITE_UI_NPM_URL,
-} from '@/constants';
-import { axios } from '@/utils';
+import { LITE_UI_GIT_REPOSITORY_URL, LITE_UI_NPM_URL } from '@/constants';
+import useNpm from '@/hooks/useNpm';
 
 const Header = () => {
-  const [version, setVersion] = useState('');
-
-  useEffect(() => {
-    getVersion();
-  }, []);
-
-  const getVersion = async () => {
-    const res: any = await axios.get(LITE_UI_NPM_REGISTRY_API_URL);
-    const { latest } = res['dist-tags'];
-    setVersion(`v${latest}`);
-  };
+  const { liteuiVersion } = useNpm();
 
   return (
     <Wrapper>
@@ -34,9 +20,9 @@ const Header = () => {
             <Link href="/">
               <Title>Lite UI</Title>
             </Link>
-            {version && (
+            {liteuiVersion && (
               <Chip size="sm" color="var(--neutral200)">
-                <VersionText>{version}</VersionText>
+                <VersionText>{liteuiVersion}</VersionText>
               </Chip>
             )}
           </Flex>
