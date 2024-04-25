@@ -14,4 +14,6 @@ export default Content;
 
 const Wrapper = styled.div`
   ${tw`flex-1 flex flex-col max-w-7xl w-full mx-auto`};
+  ${tw`px-4`};
+  ${tw`sm:px-6`};
 `;

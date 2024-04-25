@@ -59,8 +59,6 @@ export default Header;
 
 const Wrapper = styled.div`
   ${tw`fixed top-0 flex items-center w-full h-16 backdrop-blur-lg z-10`};
-  ${tw`px-4`};
-  ${tw`sm:px-6`};
 `;
 const Title = styled.p`
   ${tw`text-3xl font-semibold whitespace-nowrap`};

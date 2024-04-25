@@ -24,7 +24,7 @@ const HomeLayout = ({ children }: Props) => {
 export default HomeLayout;
 
 const Wrapper = styled.div`
-  ${tw``};
+  ${tw`font-sans`};
 `;
 const Frame = styled.div`
   ${tw`flex flex-col pt-16 min-h-[calc(100vh-224px)]`};
