@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa6';
 import { RiNpmjsLine } from 'react-icons/ri';
 import tw, { styled } from 'twin.macro';
 
-import Content from '@/components/layouts/Content';
+import Frame from '@/components/layouts/Frame';
 import {
   LITE_UI_GIT_REPOSITORY_URL,
   LITE_UI_NPM_REGISTRY_API_URL,
@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <Wrapper>
-      <Content>
+      <Frame>
         <Flex justify="between" items="center">
           <Flex items="center" gap={8}>
             <Link href="/">
@@ -50,7 +50,7 @@ const Header = () => {
             </IconWrapper>
           </Flex>
         </Flex>
-      </Content>
+      </Frame>
     </Wrapper>
   );
 };

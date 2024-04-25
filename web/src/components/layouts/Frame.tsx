@@ -6,11 +6,11 @@ interface Props {
   children?: ReactNode;
 }
 
-const Content = ({ className, children }: Props) => {
+const Frame = ({ className, children }: Props) => {
   return <Wrapper className={className}>{children}</Wrapper>;
 };
 
-export default Content;
+export default Frame;
 
 const Wrapper = styled.div`
   ${tw`flex-1 flex flex-col max-w-7xl w-full mx-auto`};

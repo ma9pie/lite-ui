@@ -3,12 +3,16 @@ import Image from 'next/image';
 import React from 'react';
 import tw, { styled } from 'twin.macro';
 
-import Content from '@/components/layouts/Content';
+import Frame from '@/components/layouts/Frame';
 
-const Footer = () => {
+interface Props {
+  className?: string;
+}
+
+const Footer = ({ className }: Props) => {
   return (
-    <Wrapper>
-      <Content>
+    <Wrapper className={className}>
+      <Frame>
         <Flex col items="center" gap={16}>
           <SubText>Made by ma9pie</SubText>
           <Flex items="center" gap={4}>
@@ -18,7 +22,7 @@ const Footer = () => {
             </LogoWrapper>
           </Flex>
         </Flex>
-      </Content>
+      </Frame>
     </Wrapper>
   );
 };
@@ -26,7 +30,7 @@ const Footer = () => {
 export default Footer;
 
 const Wrapper = styled.div`
-  ${tw`flex items-center h-56 font-medium bg-neutral-50`};
+  ${tw`flex items-center h-56 font-medium`};
 `;
 const Text = styled.p`
   ${tw`text-xl`};

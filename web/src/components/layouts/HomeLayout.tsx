@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 import tw, { styled } from 'twin.macro';
 
-import Content from '@/components/layouts/Content';
 import Footer from '@/components/layouts/Footer';
+import Frame from '@/components/layouts/Frame';
 import Header from '@/components/layouts/Header';
 
 interface Props {
@@ -13,10 +13,10 @@ const HomeLayout = ({ children }: Props) => {
   return (
     <Wrapper>
       <Header></Header>
-      <Frame>
-        <Content>{children}</Content>
-      </Frame>
-      <Footer></Footer>
+      <Container>
+        <Frame>{children}</Frame>
+      </Container>
+      <Footer className="bg-neutral-50"></Footer>
     </Wrapper>
   );
 };
@@ -26,6 +26,6 @@ export default HomeLayout;
 const Wrapper = styled.div`
   ${tw`font-sans`};
 `;
-const Frame = styled.div`
+const Container = styled.div`
   ${tw`flex flex-col pt-16 min-h-[calc(100vh-224px)]`};
 `;

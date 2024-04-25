@@ -3,7 +3,7 @@ import React from 'react';
 import HomeLayout from '@/components/layouts/HomeLayout';
 import Main from '@/components/pages/home/Main';
 
-const Home = () => {
+const HomePage = () => {
   return (
     <HomeLayout>
       <Main></Main>
@@ -11,4 +11,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
