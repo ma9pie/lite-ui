@@ -2,8 +2,7 @@ import styled from '@emotion/styled';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import useEventListener from '@/hooks/useEventListener';
-
-import { DividerProps } from '../types';
+import { DividerProps } from '@/types';
 
 const Divider = ({
   y,

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { AlignItem, DefaultProps, JustifyContent } from './';
+import { AlignItem, DefaultProps, JustifyContent } from '@/types';
 
 export interface GridProps extends DefaultProps {
   row?: number;

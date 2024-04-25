@@ -1,6 +1,6 @@
 {
   "name": "@ma9pie/lite-ui",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "React UI library",
   "keywords": [
     "react",
@@ -82,6 +82,7 @@
     "rollup": "^2.79.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-tsc-alias": "^1.1.2",
     "storybook": "^7.6.17",
     "ts-jest": "^29.1.2",
     "typescript": "^4.9.5",

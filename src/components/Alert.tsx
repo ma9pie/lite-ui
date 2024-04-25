@@ -7,7 +7,7 @@ import {
   AiOutlineWarning as WarningSvg,
 } from 'react-icons/ai';
 
-import { AlertProps } from '../types';
+import { AlertProps } from '@/types';
 
 const Alert = ({
   status = 'success',

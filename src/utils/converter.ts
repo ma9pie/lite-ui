@@ -1,4 +1,4 @@
-import { AlignItem, JustifyContent } from '../types';
+import { AlignItem, JustifyContent } from '@/types';
 
 export const justifyContent = (value?: JustifyContent) => {
   switch (value) {

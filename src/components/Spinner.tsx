@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-import { SpinnerProps } from '../types';
+import { SpinnerProps } from '@/types';
 
 function Spinner({
   size = 32,
