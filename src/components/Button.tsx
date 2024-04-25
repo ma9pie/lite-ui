@@ -7,19 +7,19 @@ import { getProperties } from '@/utils';
 
 const SIZE = {
   sm: {
-    width: '64px',
+    minWidth: '64px',
     height: '32px',
     padding: '0px 12px',
     fontSize: '12px',
   },
   md: {
-    width: '80px',
+    minWidth: '80px',
     height: '40px',
     padding: '0px 16px',
     fontSize: '14px',
   },
   lg: {
-    width: '96px',
+    minWidth: '96px',
     height: '48px',
     padding: '0px 24px',
     fontSize: '16px',
@@ -67,7 +67,7 @@ const Wrapper = styled.button<ButtonProps>`
   }
 
   ${(props) => {
-    const { width, height, padding, fontSize } = getProperties({
+    const { minWidth, height, padding, fontSize } = getProperties({
       defaultProp: 'md',
       optionalProp: props.size,
       obj: SIZE,
@@ -84,7 +84,7 @@ const Wrapper = styled.button<ButtonProps>`
     });
 
     return `
-    width: ${props.full ? '100%' : width};
+    min-width: ${props.full ? '100%' : minWidth};
     height: ${height};
     border-radius: ${radius};
     padding: ${padding};
