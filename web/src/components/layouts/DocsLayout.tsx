@@ -15,6 +15,7 @@ const DocsLayout = ({ children }: Props) => {
   return (
     <Wrapper>
       <Header></Header>
+
       <Container>
         <Frame>
           <Flex gap={16}>
@@ -46,5 +47,5 @@ const Container = styled.div`
   ${tw`flex flex-col pt-16 min-h-[calc(100vh-224px)]`};
 `;
 const Content = styled.div`
-  ${tw`flex-1 p-4`};
+  ${tw`py-4 min-h-[calc(100vh-64px)]`};
 `;
