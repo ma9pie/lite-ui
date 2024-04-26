@@ -1,9 +1,12 @@
 #  Lite UI
 Simple, fast and modern React UI library.
 
-<img alt="license" src="https://img.shields.io/badge/license-MIT-blue.svg"/>
-<img alt="npm-version" src="https://img.shields.io/npm/v/@ma9pie/lite-ui.svg"/>
-<img alt="npm-downloads" src="https://img.shields.io/npm/dt/@ma9pie/lite-ui.svg"/>
+<div style="display:flex; gap:4px;">
+  <img alt="npm-version" src="https://img.shields.io/npm/v/@ma9pie/lite-ui.svg"/>
+  <img alt="npm-downloads" src="https://img.shields.io/npm/dt/@ma9pie/lite-ui.svg"/>
+  <img alt="license" src="https://img.shields.io/badge/license-MIT-blue.svg"/>
+</div>
+
 
 ### 📄 Documentation
 Visit [https://liteui-web.vercel.app](https://liteui-web.vercel.app) to view the full documentation.
