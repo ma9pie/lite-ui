@@ -14,9 +14,9 @@ export default meta;
 
 const Component = (props: ButtonProps) => {
   return (
-    <>
+    <div className="flex flex-col w-screen h-screen">
       <Button {...props}>Button</Button>
-    </>
+    </div>
   );
 };
 
