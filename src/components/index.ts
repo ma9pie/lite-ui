@@ -10,3 +10,4 @@ export { default as List } from './List';
 export { default as Chip } from './Chip';
 export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
+export { default as Code } from './Code';
