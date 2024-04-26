@@ -30,11 +30,8 @@ export default Component;
 
 ```
 
+### 🤝 Contributing 
+Thank you for your interest in the Lite UI project. Your contributions are always welcome.
 
-
-
-
-
-
-
-
+### 📜 License
+[MIT](https://choosealicense.com/licenses/mit/)
