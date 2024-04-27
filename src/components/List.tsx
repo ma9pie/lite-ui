@@ -3,7 +3,7 @@ import React from 'react';
 
 import { ListProps, ListTreeNode } from '@/types';
 
-const List = ({ list, tabWidth = 16, gap = 0 }: ListProps) => {
+const List = ({ list, tabWidth = 16, gap = 8 }: ListProps) => {
   const generateNestedList = (data?: ListTreeNode[]) => {
     if (!data) {
       return null;
