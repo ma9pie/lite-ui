@@ -25,6 +25,7 @@ const CodeBlock = ({ code = '', ...props }: Props) => {
   return (
     <Wrapper {...props}>
       <SyntaxHighlighter
+        className="scroll-x"
         language="typescript"
         style={vs2015}
         customStyle={{ padding: 0, backgroundColor: 'transparent' }}
