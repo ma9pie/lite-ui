@@ -3,34 +3,55 @@ import React from 'react';
 
 import { ListProps, ListTreeNode } from '@/types';
 
-const List = ({ list, tabWidth = 24, gap = 8 }: ListProps) => {
+const List = ({ list, tabWidth = 16, gap = 0 }: ListProps) => {
   const generateNestedList = (data?: ListTreeNode[]) => {
     if (!data) {
       return null;
     }
-    return data.map(({ key, value, children }) => (
-      <Ul tabWidth={tabWidth} gap={gap} key={key}>
-        <Li>{value}</Li>
-        {generateNestedList(children)}
+    return (
+      <Ul tabWidth={tabWidth}>
+        {data.map(({ key, value, children }) => (
+          <Li key={key} gap={gap}>
+            {value}
+            {generateNestedList(children)}
+          </Li>
+        ))}
       </Ul>
-    ));
+    );
   };
 
-  return generateNestedList(list);
+  return <Wrapper>{generateNestedList(list)}</Wrapper>;
 };
 
 export default List;
 
-const Ul = styled.ul<{ tabWidth: number; gap: number }>`
-  margin-left: 16px;
-  list-style-type: disc;
+// FIXME: Need efficient code
+const Wrapper = styled.div`
   ul {
-    margin-left: ${({ tabWidth }) => `${tabWidth}px`};
-    margin-top: ${({ gap }) => `${gap}px`};
-    list-style-type: circle;
+    list-style-type: disc;
     ul {
-      list-style-type: square;
+      list-style-type: circle;
+      ul {
+        list-style-type: square;
+        ul {
+          list-style-type: disc;
+          ul {
+            list-style-type: circle;
+            ul {
+              list-style-type: square;
+            }
+          }
+        }
+      }
     }
   }
 `;
-const Li = styled.li``;
+const Ul = styled.ul<{ tabWidth: number }>`
+  margin-left: 16px;
+  ul {
+    margin-left: ${({ tabWidth }) => `${tabWidth}px`};
+  }
+`;
+const Li = styled.li<{ gap: number }>`
+  margin-top: ${({ gap }) => `${gap}px`};
+`;
