@@ -1,17 +1,61 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useState } from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { FaCheck, FaRegCopy } from 'react-icons/fa6';
 
 import { CodeProps } from '@/types';
 
-const CodeBlock = ({ code, ...props }: CodeProps) => {
-  return <Wrapper {...props}>{code}</Wrapper>;
+const CodeBlock = ({ code = '', ...props }: CodeProps) => {
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopy = () => {
+    setIsCopied(true);
+  };
+
+  return (
+    <Wrapper {...props}>
+      <Container>
+        <CodeText>{code}</CodeText>
+        <CopyToClipboard text={code} onCopy={handleCopy}>
+          <IconWrapper isCopied={isCopied}>
+            {isCopied ? (
+              <FaCheck size={20}></FaCheck>
+            ) : (
+              <FaRegCopy size={20}></FaRegCopy>
+            )}
+          </IconWrapper>
+        </CopyToClipboard>
+      </Container>
+    </Wrapper>
+  );
 };
 
 export default CodeBlock;
 
 const Wrapper = styled.div`
-  font-family: Hack;
-  padding: 8px 12px;
+  position: relative;
+  padding: 12px 16px;
   border-radius: 8px;
   background-color: var(--neutral200);
+`;
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 4px;
+`;
+const CodeText = styled.p`
+  font-family: Hack;
+  line-height: 20px;
+`;
+const IconWrapper = styled.div<{ isCopied: boolean }>`
+  width: 20px;
+  height: 20px;
+  transition: color 0.2s ease;
+  cursor: pointer;
+  color: ${({ isCopied }) =>
+    isCopied ? 'var(--neutral700)' : 'var(--neutral500)'};
+  &:hover {
+    color: var(--neutral700);
+  }
 `;
