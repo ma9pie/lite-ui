@@ -45,7 +45,6 @@ const Container = styled.div`
   gap: 4px;
 `;
 const CodeText = styled.p`
-  font-family: Hack;
   line-height: 20px;
 `;
 const IconWrapper = styled.div<{ isCopied: boolean }>`
