@@ -34,9 +34,12 @@ const InstallationPage = () => {
             To use Lite UI, enter the following command in your project
             terminal.
           </Text>
-          <Text>Requirements:</Text>
-          <List list={REQUIREMENTS}></List>
-          <Code className="w-fit" code="npm i @ma9pie/lite-ui"></Code>
+          <div>
+            <Text>Requirements:</Text>
+            <List list={REQUIREMENTS}></List>
+          </div>
+
+          <Code code="npm i @ma9pie/lite-ui"></Code>
         </Flex>
 
         <Flex col gap={16}>
