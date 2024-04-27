@@ -55,18 +55,26 @@ const TEST_DATA = [
     key: '4',
     value: '4',
   },
+  {
+    key: '5',
+    value: '5',
+  },
 ];
 
 const meta = {
   title: 'List',
-  args: { list: TEST_DATA, tabWidth: 24, gap: 8 },
+  args: { list: TEST_DATA, tabWidth: 16, gap: 8 },
   component: List,
 } satisfies Meta;
 
 export default meta;
 
 const Component = (props: ListProps) => {
-  return <List {...props}></List>;
+  return (
+    <>
+      <List {...props}></List>
+    </>
+  );
 };
 
 export const List_ = {
