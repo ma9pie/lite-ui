@@ -48,4 +48,7 @@ const Container = styled.div`
 `;
 const Content = styled.div`
   ${tw`py-4 min-h-[calc(100vh-64px)]`};
+  ${tw`w-[calc(100vw-32px)]`};
+  ${tw`sm:w-[calc(100vw-288px)]`};
+  ${tw`xl:w-auto`};
 `;

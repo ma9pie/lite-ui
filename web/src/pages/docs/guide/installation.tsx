@@ -1,6 +1,5 @@
 import { Code, Flex, List } from '@ma9pie/lite-ui';
 import React from 'react';
-import tw, { styled } from 'twin.macro';
 
 import CodeBlock from '@/components/common/CodeBlock';
 import Text from '@/components/common/text/Text';
@@ -40,11 +39,10 @@ const InstallationPage = () => {
           <Code className="w-fit" code="npm i @ma9pie/lite-ui"></Code>
         </Flex>
 
-        {/* TODO */}
-        {/* <Flex col gap={16}>
+        <Flex col gap={16}>
           <Text.SubTitle>Usage</Text.SubTitle>
           <CodeBlock code={USAGE_CODE}></CodeBlock>
-        </Flex> */}
+        </Flex>
       </Flex>
     </DocsLayout>
   );
