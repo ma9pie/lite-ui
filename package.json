@@ -1,6 +1,6 @@
 {
   "name": "@ma9pie/lite-ui",
-  "version": "0.0.22",
+  "version": "0.0.25",
   "description": "React UI library",
   "keywords": [
     "react",
@@ -66,6 +66,7 @@
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.21",
     "@types/react": "^18",
+    "@types/react-copy-to-clipboard": "^5.0.7",
     "autoprefixer": "^10.4.19",
     "babel-jest": "^29.7.0",
     "eslint": "^8.57.0",
@@ -77,6 +78,7 @@
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
     "postcss-import": "^16.1.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-icons": "^5.0.1",
     "reset-css": "^5.0.2",
     "rollup": "^2.79.1",
