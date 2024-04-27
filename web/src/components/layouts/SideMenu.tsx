@@ -22,11 +22,11 @@ const SideMenu = () => {
 
   return (
     <Wrapper>
-      <Flex col gap={8}>
+      <Flex col gap={16}>
         {MENU_LIST.map((category) => (
-          <Flex key={category.key} col gap={4}>
+          <Flex key={category.key} col gap={8}>
             <CategoryName>{category.label}</CategoryName>
-            <Flex col gap={2}>
+            <Flex col>
               {sortList(category.list).map(({ key, label, createdAt }) => (
                 <List
                   key={key}
@@ -44,10 +44,10 @@ const SideMenu = () => {
                       return null;
                     }
                     if (!createdAt) {
-                      return <PreparingChip>Preparing</PreparingChip>;
+                      return <Badge color="var(--neutral300)">Preparing</Badge>;
                     }
                     if (isNewComponent(createdAt)) {
-                      return <NewChip>New</NewChip>;
+                      return <Badge color="var(--blue500)">New</Badge>;
                     }
                   })()}
                 </List>
@@ -66,15 +66,12 @@ const Wrapper = styled.div`
   ${tw`p-4 min-h-[calc(100vh-64px)]`};
 `;
 const CategoryName = styled.p`
-  ${tw`text-2xl font-semibold`};
+  ${tw`text-xl font-semibold`};
 `;
 const List = styled(Link)`
-  ${tw`flex items-center gap-1 text-base px-2 py-1 rounded-md transition-colors duration-300`};
+  ${tw`flex items-center gap-2 text-base px-2 py-2 rounded-md transition-colors duration-300`};
   ${tw`hover:(text-neutral-900 bg-neutral-100)`};
 `;
-const PreparingChip = styled(Chip)`
-  ${tw`!h-5 !text-xs text-white !bg-neutral-300 !px-2`};
-`;
-const NewChip = styled(Chip)`
-  ${tw`!h-5 !text-xs text-white !bg-blue-500 !px-2`};
+const Badge = styled(Chip)`
+  ${tw`text-white text-xs h-6`};
 `;
