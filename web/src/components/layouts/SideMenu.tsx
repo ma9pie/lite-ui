@@ -73,5 +73,5 @@ const List = styled(Link)`
   ${tw`hover:(text-neutral-900 bg-neutral-100)`};
 `;
 const Badge = styled(Chip)`
-  ${tw`text-white text-xs h-6`};
+  ${tw`text-white !text-xs !leading-[12px] !h-6`};
 `;
