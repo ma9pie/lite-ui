@@ -1,3 +1,9 @@
+import { MenuListItem } from '@/types';
+
+const sortList = (arr: MenuListItem[]) => {
+  return arr.sort(({ key: keyA }, { key: keyB }) => keyA.localeCompare(keyB));
+};
+
 export const MENU_LIST = [
   {
     key: 'guide',
@@ -9,7 +15,7 @@ export const MENU_LIST = [
   {
     key: 'components',
     label: 'Components',
-    list: [
+    list: sortList([
       { key: 'flex', label: 'Flex', createdAt: '' },
       { key: 'grid', label: 'Grid', createdAt: '' },
       { key: 'divider', label: 'Divider', createdAt: '' },
@@ -21,6 +27,6 @@ export const MENU_LIST = [
       { key: 'chip', label: 'Chip', createdAt: '' },
       { key: 'avatar', label: 'Avatar', createdAt: '' },
       { key: 'button', label: 'Button', createdAt: '' },
-    ],
+    ]),
   },
 ];

@@ -5,6 +5,7 @@ import tw, { styled } from 'twin.macro';
 import Footer from '@/components/layouts/Footer';
 import Frame from '@/components/layouts/Frame';
 import Header from '@/components/layouts/Header';
+import MobileNav from '@/components/layouts/MobileNav';
 import SideNav from '@/components/layouts/SideNav';
 
 interface Props {
@@ -14,6 +15,8 @@ interface Props {
 const DocsLayout = ({ children }: Props) => {
   return (
     <Wrapper>
+      <MobileNav></MobileNav>
+
       <Header></Header>
 
       <Container>

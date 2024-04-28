@@ -5,20 +5,13 @@ import React from 'react';
 import tw, { styled } from 'twin.macro';
 
 import { MENU_LIST } from '@/constants';
+import useMobileNav from '@/hooks/useMobileNav';
 import { isNewComponent } from '@/utils';
-
-interface ListItem {
-  key: string;
-  label: string;
-  createdAt: string;
-}
-
-const sortList = (arr: ListItem[]) => {
-  return arr.sort(({ key: keyA }, { key: keyB }) => keyA.localeCompare(keyB));
-};
 
 const SideNav = () => {
   const { pathname } = useRouter();
+
+  const { closeMobileNav } = useMobileNav();
 
   return (
     <Wrapper>
@@ -27,7 +20,7 @@ const SideNav = () => {
           <Flex key={category.key} col gap={8}>
             <CategoryName>{category.label}</CategoryName>
             <Flex col>
-              {sortList(category.list).map(({ key, label, createdAt }) => (
+              {category.list.map(({ key, label, createdAt }) => (
                 <List
                   key={key}
                   href={`/docs/${category.key}/${key}`}
@@ -37,6 +30,7 @@ const SideNav = () => {
                       : 'var(--neutral500)',
                     pointerEvents: createdAt ? 'auto' : 'none',
                   }}
+                  onClick={closeMobileNav}
                 >
                   {label}
                   {(() => {
