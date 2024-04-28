@@ -17,7 +17,7 @@ const sortList = (arr: ListItem[]) => {
   return arr.sort(({ key: keyA }, { key: keyB }) => keyA.localeCompare(keyB));
 };
 
-const SideMenu = () => {
+const SideNav = () => {
   const { pathname } = useRouter();
 
   return (
@@ -60,7 +60,7 @@ const SideMenu = () => {
   );
 };
 
-export default SideMenu;
+export default SideNav;
 
 const Wrapper = styled.div`
   ${tw`p-4 min-h-[calc(100vh-64px)]`};
