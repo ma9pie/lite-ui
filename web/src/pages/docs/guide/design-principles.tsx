@@ -17,7 +17,7 @@ const DesignPrinciples = () => {
         <Flex col gap={8}>
           <Text.SubTitle>Simplicity</Text.SubTitle>
           <Text>
-            {/* 높은 코드 복잡도는 유지보수를 어렵게 하고 성능 저하 발생 가능성을 커지게 합니다. Lite UI는 하나의 컴포넌트는 단일 책임을 가지고 너무 많은 props를 받지 않도록 설계하려고 노력합니다. Lite UI는 “Simple is best”라는 원칙을 통해 웹사이트의 복잡도를 낮추는데 기여하고자 합니다. */}
+            {/* 높은 코드 복잡도는 유지보수를 어렵게 하고 성능 저하 발생 가능성을 커지게 합니다. Lite UI는 하나의 컴포넌트는 단일 책임을 가지고 너무 많은 props를 받지 않도록 설계하려고 노력합니다. Lite UI는 "Simple is best"라는 원칙을 통해 웹사이트의 복잡도를 낮추는데 기여하고자 합니다. */}
             High code complexity makes maintenance difficult and increases the
             likelihood of performance degradation. Lite UI tries to design a
             component to have a single responsibility and not receive too many
