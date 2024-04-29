@@ -10,6 +10,11 @@ export const MENU_LIST = [
     label: 'Guide',
     list: [
       { key: 'installation', label: 'Installation', createdAt: '2024-04-26' },
+      {
+        key: 'design-principles',
+        label: 'Design Principles',
+        createdAt: '2024-04-29',
+      },
     ],
   },
   {
