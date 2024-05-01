@@ -25,7 +25,7 @@ const CodeBlock = ({ code = '', ...props }: Props) => {
     setIsCopied(true);
     pid = setTimeout(() => {
       setIsCopied(false);
-    }, 3000);
+    }, 2000);
   };
 
   return (
