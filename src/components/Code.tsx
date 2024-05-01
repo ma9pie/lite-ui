@@ -5,11 +5,17 @@ import { FaCheck, FaRegCopy } from 'react-icons/fa6';
 
 import { CodeProps } from '@/types';
 
+let pid: ReturnType<typeof setTimeout>;
+
 const CodeBlock = ({ code = '', ...props }: CodeProps) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = () => {
+    clearTimeout(pid);
     setIsCopied(true);
+    pid = setTimeout(() => {
+      setIsCopied(false);
+    }, 2000);
   };
 
   return (
