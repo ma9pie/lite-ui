@@ -7,10 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "latest": "npm i @ma9pie/lite-ui@latest"
+    "latest": "npm cache verify && npm i @ma9pie/lite-ui@latest"
   },
   "dependencies": {
-    "@ma9pie/lite-ui": "^0.0.25",
+    "@ma9pie/lite-ui": "^0.0.26",
     "@tanstack/react-query": "^5.32.0",
     "axios": "^1.6.8",
     "jotai": "^2.8.0",
