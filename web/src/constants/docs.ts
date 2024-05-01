@@ -1,10 +1,10 @@
-import { MenuListItem } from '@/types';
+import { DocsListItem } from '@/types';
 
-const sortList = (arr: MenuListItem[]) => {
+const sortList = (arr: DocsListItem[]) => {
   return arr.sort(({ key: keyA }, { key: keyB }) => keyA.localeCompare(keyB));
 };
 
-export const MENU_LIST = [
+export const DOCS_LIST = [
   {
     key: 'guide',
     label: 'Guide',
