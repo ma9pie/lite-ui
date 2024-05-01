@@ -21,11 +21,14 @@ const SideNav = () => {
             <CategoryName>{category.label}</CategoryName>
             <Flex col>
               {category.list.map(({ key, label, createdAt }) => (
-                <Link key={key} href={`/docs/${category.key}/${key}`}>
+                <Link
+                  key={key}
+                  href={`/docs/${category.key}/${key}`}
+                  style={{
+                    pointerEvents: createdAt ? 'auto' : 'none',
+                  }}
+                >
                   <List
-                    style={{
-                      pointerEvents: createdAt ? 'auto' : 'none',
-                    }}
                     active={pathname.includes(key)}
                     onClick={closeMobileNav}
                   >
