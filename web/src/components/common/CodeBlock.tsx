@@ -15,11 +15,17 @@ interface Props {
   code?: string;
 }
 
+let pid: ReturnType<typeof setTimeout>;
+
 const CodeBlock = ({ code = '', ...props }: Props) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const copyCode = () => {
+    clearTimeout(pid);
     setIsCopied(true);
+    pid = setTimeout(() => {
+      setIsCopied(false);
+    }, 3000);
   };
 
   return (
