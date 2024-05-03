@@ -24,7 +24,7 @@ const APITable = ({ className, rows }: Props) => {
         {rows.map(({ property, type, description, defaultValue }, idx) => (
           <TableRow key={idx}>
             <BodyCell>{property}</BodyCell>
-            <BodyCell>{type?.join(' | ')}</BodyCell>
+            <BodyCell>{type.join(' | ')}</BodyCell>
             <BodyCell>{description}</BodyCell>
             <BodyCell>{JSON.stringify(defaultValue) || '-'}</BodyCell>
           </TableRow>
