@@ -13,7 +13,7 @@ export interface ExampleComponent {
 }
 export interface APITableRowItem {
   property: string;
-  type?: string;
+  type?: string[];
   description?: string;
-  default?: string;
+  defaultValue?: any;
 }

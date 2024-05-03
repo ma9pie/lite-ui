@@ -2,33 +2,31 @@ import React from 'react';
 import tw, { styled } from 'twin.macro';
 
 import { APITableRowItem } from '@/types';
-import { firstToUpper } from '@/utils';
 
 interface Props {
   className?: string;
   rows: APITableRowItem[];
 }
 
-type Field = 'property' | 'type' | 'description' | 'default';
-const FIELD: Field[] = ['property', 'type', 'description', 'default'];
-
 const APITable = ({ className, rows }: Props) => {
   return (
     <Wrapper className={className}>
       <TableHead>
         <TableRow>
-          {FIELD.map((field) => (
-            <HeadCell key={field}>{firstToUpper(field)}</HeadCell>
-          ))}
+          <HeadCell>Property</HeadCell>
+          <HeadCell>Type</HeadCell>
+          <HeadCell>Description</HeadCell>
+          <HeadCell>Default</HeadCell>
         </TableRow>
       </TableHead>
 
       <TableBody>
-        {rows.map((props, idx) => (
+        {rows.map(({ property, type, description, defaultValue }, idx) => (
           <TableRow key={idx}>
-            {FIELD.map((field) => (
-              <BodyCell key={field}>{props[field] || '-'}</BodyCell>
-            ))}
+            <BodyCell>{property}</BodyCell>
+            <BodyCell>{type?.join(' | ')}</BodyCell>
+            <BodyCell>{description}</BodyCell>
+            <BodyCell>{JSON.stringify(defaultValue) || '-'}</BodyCell>
           </TableRow>
         ))}
       </TableBody>
@@ -43,7 +41,13 @@ const Wrapper = styled.table`
 
   th,
   td {
-    ${tw`flex-1 flex justify-start items-center`};
+    ${tw`flex-[3] flex justify-start items-center`};
+    &:first-of-type {
+      ${tw`flex-[2]`};
+    }
+    &:last-of-type {
+      ${tw`flex-[2]`};
+    }
   }
 
   th {
