@@ -27,7 +27,7 @@ export const DOCS_LIST = [
       { key: 'spacer', label: 'Spacer', createdAt: '' },
       { key: 'switch', label: 'Switch', createdAt: '' },
       { key: 'spinner', label: 'Spinner', createdAt: '' },
-      { key: 'alert', label: 'Alert', createdAt: '' },
+      { key: 'alert', label: 'Alert', createdAt: '2024-05-02' },
       { key: 'list', label: 'List', createdAt: '' },
       { key: 'chip', label: 'Chip', createdAt: '' },
       { key: 'avatar', label: 'Avatar', createdAt: '' },

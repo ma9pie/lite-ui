@@ -1,7 +1,7 @@
 import { Flex } from '@ma9pie/lite-ui';
 import React from 'react';
 
-import Text from '@/components/common/text/Text';
+import { Text } from '@/components/common/text';
 import DocsLayout from '@/components/layouts/DocsLayout';
 
 const DesignPrinciples = () => {

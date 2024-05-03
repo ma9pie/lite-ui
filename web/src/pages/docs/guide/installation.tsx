@@ -2,7 +2,7 @@ import { Code, Flex, List } from '@ma9pie/lite-ui';
 import React from 'react';
 
 import CodeBlock from '@/components/common/CodeBlock';
-import Text from '@/components/common/text/Text';
+import { Text } from '@/components/common/text';
 import DocsLayout from '@/components/layouts/DocsLayout';
 
 const REQUIREMENTS = [

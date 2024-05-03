@@ -4,7 +4,7 @@ import React from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
 import tw, { styled } from 'twin.macro';
 
-import GradientText from '@/components/common/text/GradientText';
+import { GradientText } from '@/components/common/text';
 import Description from '@/components/pages/home/Description';
 import Headline from '@/components/pages/home/Headline';
 
