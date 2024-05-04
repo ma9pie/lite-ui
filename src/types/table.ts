@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { DefaultProps } from '@/types';
 
 export type TableAlign = 'start' | 'center' | 'end';
@@ -6,7 +8,7 @@ export interface TableField {
   value: string;
   flex?: number;
   align?: TableAlign;
-  render?: (props: any) => JSX.Element;
+  render?: (props: any) => ReactNode;
 }
 export interface TableRow {
   key: string;
