@@ -6,13 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "latest": "npm cache verify && npm i @ma9pie/lite-ui@latest"
   },
   "dependencies": {
+    "@ma9pie/lite-ui": "^0.0.27",
+    "@tanstack/react-query": "^5.32.0",
+    "axios": "^1.6.8",
+    "jotai": "^2.8.0",
     "next": "14.1.4",
     "react": "18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "18.2.0",
-    "react-icons": "^5.0.1"
+    "react-icons": "^5.0.1",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.11.0",
@@ -21,12 +28,16 @@
     "@emotion/styled": "^11.11.0",
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.70",
+    "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-dom": "^18.2.22",
+    "@types/react-syntax-highlighter": "^15.5.11",
     "autoprefixer": "^10.4.19",
     "babel-plugin-macros": "^3.1.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.1.4",
     "eslint-plugin-simple-import-sort": "^12.0.0",
+    "normalize.css": "^8.0.1",
+    "reset-css": "^5.0.2",
     "tailwindcss": "^3.4.1",
     "twin.macro": "^3.4.1",
     "typescript": "^5.4.3"

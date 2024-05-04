@@ -1,1 +1,2 @@
-export * from './tmp';
+export * from './urls';
+export * from './docs';

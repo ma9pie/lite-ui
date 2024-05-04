@@ -1,1 +1,2 @@
-export * from './tmp';
+export * from './axios';
+export * from './check';

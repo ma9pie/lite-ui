@@ -1,7 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'normalize.css';
+@import 'reset-css';
+@import 'colors';
 
 :root {
   --brandColor: #000000;
+}
+
+.scroll-x {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-x::-webkit-scrollbar {
+  display: none;
 }

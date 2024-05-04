@@ -1,1 +1,1 @@
-export * from './tmp';
+export * from './docs';
