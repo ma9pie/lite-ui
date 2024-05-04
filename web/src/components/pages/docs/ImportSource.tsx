@@ -1,4 +1,4 @@
-import { Code, Flex } from '@ma9pie/lite-ui';
+import { Code } from '@ma9pie/lite-ui';
 import Link from 'next/link';
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
@@ -10,16 +10,15 @@ interface Props {
 
 const ImportSource = ({ name }: Props) => {
   return (
-    <Flex col gap={8}>
-      <Flex items="center">
+    <Wrapper>
+      <Container>
         <FieldText>Import</FieldText>
-        <Code
-          style={{ padding: '4px 8px' }}
+        <ImportCode
           code={`import { ${name} } from '@ma9pie/lite-ui';`}
-        ></Code>
-      </Flex>
+        ></ImportCode>
+      </Container>
 
-      <Flex items="center">
+      <Container>
         <FieldText>Source</FieldText>
         <LinkText
           href={`https://github.com/ma9pie/lite-ui/blob/main/src/components/${name}.tsx`}
@@ -28,13 +27,27 @@ const ImportSource = ({ name }: Props) => {
           <FaGithub size={20}></FaGithub>
           {`components/${name}.tsx`}
         </LinkText>
-      </Flex>
-    </Flex>
+      </Container>
+    </Wrapper>
   );
 };
 
 export default ImportSource;
 
+const Wrapper = styled.div`
+  ${tw`flex flex-col`};
+  ${tw`gap-4`};
+  ${tw`sm:gap-0`};
+`;
+const Container = styled.div`
+  ${tw`flex`};
+  ${tw`flex-col gap-2`};
+  ${tw`sm:(min-h-10 flex-row items-center)`};
+`;
+const ImportCode = styled(Code)`
+  ${tw`w-full px-4 py-2`};
+  ${tw`sm:(w-auto px-2 py-1)`};
+`;
 const FieldText = styled.p`
   ${tw`w-16 text-neutral-500`};
 `;

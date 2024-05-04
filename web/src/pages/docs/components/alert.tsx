@@ -17,24 +17,28 @@ const AlertPage = () => {
         ]}
         apiData={[
           {
+            key: '0',
             property: 'status',
             type: ['success', 'info', 'warn', 'error'],
             description: 'Type of Alert styles',
             defaultValue: 'success',
           },
           {
+            key: '1',
             property: 'iconSize',
             type: ['number'],
             description: 'Size of icon',
             defaultValue: 20,
           },
           {
+            key: '2',
             property: 'hideIcon',
             type: ['boolean'],
             description: 'Hide icon',
             defaultValue: false,
           },
           {
+            key: '3',
             property: 'children',
             type: ['ReactNode'],
             description: 'Alert content',
