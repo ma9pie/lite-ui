@@ -25,7 +25,8 @@ const Wrapper = styled.div`
   ${tw`flex flex-col gap-4`};
 `;
 const Title = styled.p`
-  ${tw`text-xl`};
+  ${tw`text-base`};
+  ${tw`sm:text-lg`};
 `;
 const Container = styled.div`
   ${tw`p-4 border border-solid border-neutral-200 rounded-xl`};

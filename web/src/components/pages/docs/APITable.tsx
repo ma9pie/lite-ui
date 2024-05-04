@@ -13,7 +13,11 @@ const APITable = ({ rows }: Props) => {
       minWidth={600}
       field={[
         { key: 'property', value: 'Property' },
-        { key: 'type', value: 'Type', render: ({ type }) => type.join(' | ') },
+        {
+          key: 'type',
+          value: 'Type',
+          render: ({ type }) => type.join(' | '),
+        },
         { key: 'description', value: 'Description' },
         {
           key: 'defaultValue',
