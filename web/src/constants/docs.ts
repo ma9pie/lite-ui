@@ -30,7 +30,7 @@ export const DOCS_LIST = [
       { key: 'alert', label: 'Alert', createdAt: '2024-05-02' },
       { key: 'list', label: 'List', createdAt: '' },
       { key: 'chip', label: 'Chip', createdAt: '' },
-      { key: 'avatar', label: 'Avatar', createdAt: '' },
+      { key: 'avatar', label: 'Avatar', createdAt: '2024-05-06' },
       { key: 'button', label: 'Button', createdAt: '' },
     ]),
   },

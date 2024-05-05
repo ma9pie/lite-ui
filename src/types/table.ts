@@ -16,7 +16,7 @@ export interface TableRow {
 }
 
 export interface TableProps extends DefaultProps {
+  minWidth?: number | string;
   field: TableField[];
   rows: TableRow[];
-  minWidth?: number | string;
 }

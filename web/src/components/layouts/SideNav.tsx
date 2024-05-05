@@ -6,7 +6,7 @@ import tw, { styled } from 'twin.macro';
 
 import { DOCS_LIST } from '@/constants';
 import useMobileNav from '@/hooks/useMobileNav';
-import { isNewComponent } from '@/utils';
+import { isNewComponent, isPreparingComponent } from '@/utils';
 
 const SideNav = () => {
   const { pathname } = useRouter();
@@ -16,42 +16,58 @@ const SideNav = () => {
   return (
     <Wrapper>
       <Flex col gap={16}>
-        {DOCS_LIST.map((category) => (
-          <Flex key={category.key} col gap={8}>
-            <CategoryName>{category.label}</CategoryName>
-            <Flex col>
-              {category.list.map(({ key, label, createdAt }) => (
-                <Link
-                  key={key}
-                  href={`/docs/${category.key}/${key}`}
-                  style={{
-                    pointerEvents: createdAt ? 'auto' : 'none',
-                  }}
-                >
-                  <List
-                    active={pathname.includes(key)}
-                    onClick={closeMobileNav}
-                  >
-                    {label}
-                    {(() => {
-                      if (category.key !== 'components') {
-                        return null;
-                      }
-                      if (!createdAt) {
-                        return (
-                          <Badge color="var(--neutral300)">Preparing</Badge>
-                        );
-                      }
-                      if (isNewComponent(createdAt)) {
-                        return <Badge color="var(--blue500)">New</Badge>;
-                      }
-                    })()}
-                  </List>
-                </Link>
-              ))}
+        {DOCS_LIST.map(
+          ({ key: categoryKey, label: categoryLabel, list: categoryList }) => (
+            <Flex key={categoryKey} col gap={8}>
+              <CategoryName>{categoryLabel}</CategoryName>
+              <Flex col>
+                {categoryList.map(
+                  ({
+                    key: pageKey,
+                    label: pageLabel,
+                    createdAt: pageCreatedAt,
+                  }) => {
+                    const url = `/docs/${categoryKey}/${pageKey}`;
+                    const isPreparing = isPreparingComponent(pageCreatedAt);
+                    const isNew = isNewComponent(pageCreatedAt);
+
+                    return (
+                      <Link
+                        key={pageKey}
+                        href={url}
+                        style={{
+                          pointerEvents: isPreparing ? 'none' : 'auto',
+                        }}
+                      >
+                        <List
+                          active={pathname.includes(pageKey)}
+                          onClick={closeMobileNav}
+                        >
+                          {pageLabel}
+                          {(() => {
+                            if (categoryKey !== 'components') {
+                              return null;
+                            }
+                            if (isPreparing) {
+                              return (
+                                <Badge color="var(--neutral300)">
+                                  Preparing
+                                </Badge>
+                              );
+                            }
+                            if (isNew) {
+                              return <Badge color="var(--blue500)">New</Badge>;
+                            }
+                          })()}
+                        </List>
+                      </Link>
+                    );
+                  }
+                )}
+              </Flex>
             </Flex>
-          </Flex>
-        ))}
+          )
+        )}
       </Flex>
     </Wrapper>
   );

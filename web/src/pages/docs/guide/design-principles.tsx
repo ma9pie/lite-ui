@@ -4,7 +4,7 @@ import React from 'react';
 import { Text } from '@/components/common/text';
 import DocsLayout from '@/components/layouts/DocsLayout';
 
-const DesignPrinciples = () => {
+const DocsGuidePage = () => {
   return (
     <DocsLayout>
       <Flex col gap={32}>
@@ -52,4 +52,4 @@ const DesignPrinciples = () => {
   );
 };
 
-export default DesignPrinciples;
+export default DocsGuidePage;
