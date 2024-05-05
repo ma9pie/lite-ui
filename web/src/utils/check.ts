@@ -1,6 +1,18 @@
+export const isPreparingComponent = (createdAt: string) => {
+  if (!createdAt) {
+    return true;
+  }
+  const nowTime = new Date().getTime();
+  const createdTime = new Date(createdAt).getTime();
+  return nowTime < createdTime;
+};
+
 export const isNewComponent = (createdAt: string) => {
-  const now = new Date();
-  const createdDate = new Date(createdAt);
+  if (!createdAt) {
+    return false;
+  }
+  const nowTime = new Date().getTime();
+  const createdTime = new Date(createdAt).getTime();
   const period = 30 * 24 * 60 * 60 * 1000;
-  return now.getTime() - createdDate.getTime() <= period;
+  return nowTime - createdTime <= period;
 };

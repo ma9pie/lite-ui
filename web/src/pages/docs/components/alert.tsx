@@ -5,7 +5,7 @@ import DocsForm from '@/components/pages/docs/DocsForm';
 import AlertIcon from '@/components/pages/docs/exmaples/alert/AlertIcon';
 import AlertStatus from '@/components/pages/docs/exmaples/alert/AlertStatus';
 
-const AlertPage = () => {
+const DocsComponentPage = () => {
   return (
     <DocsLayout>
       <DocsForm
@@ -49,4 +49,4 @@ const AlertPage = () => {
   );
 };
 
-export default AlertPage;
+export default DocsComponentPage;

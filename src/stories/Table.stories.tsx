@@ -61,7 +61,7 @@ const Component = (props: TableProps) => {
     },
   ];
 
-  return <Table {...props} field={field} rows={rows} minWidth={600}></Table>;
+  return <Table {...props} minWidth={600} field={field} rows={rows}></Table>;
 };
 
 export const Table_ = {

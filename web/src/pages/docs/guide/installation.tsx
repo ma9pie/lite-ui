@@ -24,7 +24,7 @@ const Component = () => {
 export default Component;
 `;
 
-const InstallationPage = () => {
+const DocsGuidePage = () => {
   return (
     <DocsLayout>
       <Flex col gap={32}>
@@ -51,4 +51,4 @@ const InstallationPage = () => {
   );
 };
 
-export default InstallationPage;
+export default DocsGuidePage;
