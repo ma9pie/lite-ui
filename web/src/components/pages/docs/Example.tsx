@@ -13,8 +13,8 @@ const Example = ({ title, component }: Props) => {
   return (
     <Wrapper>
       <Title>{title}</Title>
-      <CodeBlock theme="light" code={component.code}></CodeBlock>
       <Container>{component()}</Container>
+      <CodeBlock theme="light" code={component.code}></CodeBlock>
     </Wrapper>
   );
 };
@@ -22,7 +22,7 @@ const Example = ({ title, component }: Props) => {
 export default Example;
 
 const Wrapper = styled.div`
-  ${tw`flex flex-col gap-4`};
+  ${tw`flex flex-col gap-2`};
 `;
 const Title = styled.p`
   ${tw`text-base`};

@@ -2,7 +2,7 @@ import React from 'react';
 
 import DocsLayout from '@/components/layouts/DocsLayout';
 import DocsForm from '@/components/pages/docs/DocsForm';
-import AvatarSize from '@/components/pages/docs/exmaples/avatar/AvatarSize';
+import { AvatarSize } from '@/components/pages/docs/exmaples/avatar';
 
 const DocsComponentPage = () => {
   return (
@@ -13,14 +13,12 @@ const DocsComponentPage = () => {
         examples={[{ title: 'Size', component: AvatarSize }]}
         apiData={[
           {
-            key: '0',
             property: 'size',
             type: ['xs', 'sm', 'md', 'lg', 'xl'],
             description: 'Size of Avatar',
             defaultValue: 'md',
           },
           {
-            key: '1',
             property: 'src',
             type: ['string'],
             description: 'Image source',

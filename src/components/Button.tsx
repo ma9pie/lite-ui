@@ -37,9 +37,26 @@ const BACKGROUND_COLOR = {
   primary: 'var(--blue500)',
 };
 
-const Button = ({ disableRipple, children, ...props }: ButtonProps) => {
+const Button = ({
+  full = false,
+  size = 'md',
+  radius = 'md',
+  color = 'default',
+  disabled = false,
+  disableRipple = false,
+  children,
+  ...props
+}: ButtonProps) => {
   return (
-    <Wrapper {...props}>
+    <Wrapper
+      full={full}
+      size={size}
+      radius={radius}
+      color={color}
+      disabled={disabled}
+      disableRipple={disableRipple}
+      {...props}
+    >
       {children}
       {!disableRipple && <Ripple></Ripple>}
     </Wrapper>
