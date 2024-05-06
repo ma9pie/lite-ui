@@ -12,7 +12,6 @@ export interface ExampleComponent {
   code: string;
 }
 export interface APITableRowItem {
-  key: string;
   property: string;
   type: string[];
   description?: string;

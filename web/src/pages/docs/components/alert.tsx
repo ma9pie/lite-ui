@@ -2,8 +2,7 @@ import React from 'react';
 
 import DocsLayout from '@/components/layouts/DocsLayout';
 import DocsForm from '@/components/pages/docs/DocsForm';
-import AlertIcon from '@/components/pages/docs/exmaples/alert/AlertIcon';
-import AlertStatus from '@/components/pages/docs/exmaples/alert/AlertStatus';
+import { AlertIcon, AlertStatus } from '@/components/pages/docs/exmaples/alert';
 
 const DocsComponentPage = () => {
   return (
@@ -17,28 +16,24 @@ const DocsComponentPage = () => {
         ]}
         apiData={[
           {
-            key: '0',
             property: 'status',
             type: ['success', 'info', 'warn', 'error'],
             description: 'Type of Alert styles',
             defaultValue: 'success',
           },
           {
-            key: '1',
             property: 'iconSize',
             type: ['number'],
             description: 'Size of icon',
             defaultValue: 20,
           },
           {
-            key: '2',
             property: 'hideIcon',
             type: ['boolean'],
             description: 'Hide icon',
             defaultValue: false,
           },
           {
-            key: '3',
             property: 'children',
             type: ['ReactNode'],
             description: 'Alert content',

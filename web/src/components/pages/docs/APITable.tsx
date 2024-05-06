@@ -12,20 +12,22 @@ const APITable = ({ rows }: Props) => {
     <Table
       minWidth={600}
       field={[
-        { key: 'property', value: 'Property' },
+        { key: 'property', value: 'Property', flex: 2 },
         {
           key: 'type',
           value: 'Type',
+          flex: 3,
           render: ({ type }) => type.join(' | '),
         },
-        { key: 'description', value: 'Description' },
+        { key: 'description', value: 'Description', flex: 3 },
         {
           key: 'defaultValue',
           value: 'Default',
+          flex: 2,
           render: ({ defaultValue }) => JSON.stringify(defaultValue) || '-',
         },
       ]}
-      rows={rows}
+      rows={rows.map((item, idx) => ({ key: idx, ...item }))}
     ></Table>
   );
 };

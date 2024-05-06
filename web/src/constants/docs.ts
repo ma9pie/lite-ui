@@ -31,7 +31,7 @@ export const DOCS_LIST = [
       { key: 'list', label: 'List', createdAt: '' },
       { key: 'chip', label: 'Chip', createdAt: '' },
       { key: 'avatar', label: 'Avatar', createdAt: '2024-05-05' },
-      { key: 'button', label: 'Button', createdAt: '' },
+      { key: 'button', label: 'Button', createdAt: '2024-05-06' },
     ]),
   },
 ];
