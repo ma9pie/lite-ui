@@ -2,16 +2,18 @@ import { ReactNode } from 'react';
 
 import { DefaultProps } from '@/types';
 
+export type TableKey = number | string;
 export type TableAlign = 'start' | 'center' | 'end';
+
 export interface TableField {
-  key: string;
+  key: TableKey;
   value: string;
   flex?: number;
   align?: TableAlign;
   render?: (props: any) => ReactNode;
 }
 export interface TableRow {
-  key: string;
+  key: TableKey;
   [property: string]: any;
 }
 

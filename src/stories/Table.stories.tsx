@@ -39,21 +39,21 @@ const Component = (props: TableProps) => {
   ];
   const rows = [
     {
-      key: '0',
+      key: 0,
       imgNum: '11',
       name: 'John Smith',
       age: 25,
       address: '123 Main Street, New York',
     },
     {
-      key: '1',
+      key: 1,
       imgNum: '49',
       name: 'Emily Johnson',
       age: 30,
       address: '456 Oak Avenue, Los Angeles',
     },
     {
-      key: '2',
+      key: 2,
       imgNum: '67',
       name: 'Michael Brown',
       age: 28,
