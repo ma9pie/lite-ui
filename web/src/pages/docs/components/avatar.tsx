@@ -23,6 +23,12 @@ const DocsComponentPage = () => {
             type: ['string'],
             description: 'Image source',
           },
+          {
+            property: 'alt',
+            type: ['string'],
+            description: 'Image alternate',
+            defaultValue: '',
+          },
         ]}
       ></DocsForm>
     </DocsLayout>
