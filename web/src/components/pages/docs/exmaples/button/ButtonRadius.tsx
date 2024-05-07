@@ -3,7 +3,7 @@ import React from 'react';
 
 const App = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 flex-wrap">
       <Button radius="none">None</Button>
       <Button radius="sm">Small</Button>
       <Button radius="md">Medium</Button>
@@ -20,7 +20,7 @@ import React from 'react';
 
 const App = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 flex-wrap">
       <Button radius="none">None</Button>
       <Button radius="sm">Small</Button>
       <Button radius="md">Medium</Button>

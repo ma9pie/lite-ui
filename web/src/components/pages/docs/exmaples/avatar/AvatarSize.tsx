@@ -3,7 +3,7 @@ import React from 'react';
 
 const App = () => {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 flex-wrap">
       <Avatar size="xs" src="https://i.pravatar.cc/150?img=5"></Avatar>
       <Avatar size="sm" src="https://i.pravatar.cc/150?img=11"></Avatar>
       <Avatar size="md" src="https://i.pravatar.cc/150?img=37"></Avatar>
@@ -20,7 +20,7 @@ import React from 'react';
 
 const App = () => {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 flex-wrap">
       <Avatar size="xs" src="https://i.pravatar.cc/150?img=5"></Avatar>
       <Avatar size="sm" src="https://i.pravatar.cc/150?img=11"></Avatar>
       <Avatar size="md" src="https://i.pravatar.cc/150?img=37"></Avatar>
