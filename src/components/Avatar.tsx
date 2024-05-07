@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
-import React, { useMemo } from 'react';
+import React from 'react';
 import { FaUser } from 'react-icons/fa';
 
 import { AvatarProps } from '@/types';
+import { getProperties } from '@/utils';
 
 const SIZE_MAP = {
   xs: '16px',
@@ -12,37 +13,51 @@ const SIZE_MAP = {
   xl: '48px',
 };
 
-const Avatar = ({ size = 'md', src, ...props }: AvatarProps) => {
-  const avatarSize = useMemo(() => SIZE_MAP[size] || SIZE_MAP['md'], [size]);
+const Avatar = ({ size = 'md', src, alt = '', ...props }: AvatarProps) => {
   if (!src) {
     return (
-      <Wrapper size={avatarSize} {...props}>
-        <FaUser size="50%" color="var(--neutral400)"></FaUser>
+      <Wrapper {...props}>
+        <ImageBox size={size}>
+          <FaUser size="50%" color="var(--neutral400)"></FaUser>
+        </ImageBox>
       </Wrapper>
     );
   }
+
   return (
-    <Wrapper size={avatarSize} {...props}>
-      <ImageBox src={src}></ImageBox>
+    <Wrapper {...props}>
+      <ImageBox size={size}>
+        <Image src={src} alt={alt}></Image>
+      </ImageBox>
     </Wrapper>
   );
 };
 
 export default Avatar;
 
-const Wrapper = styled.div<{ size: string }>`
+const Wrapper = styled.span``;
+const ImageBox = styled.div<{ size: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: ${({ size }) => size};
-  height: ${({ size }) => size};
   border-radius: 100%;
   background-color: var(--neutral200);
   overflow: hidden;
+
+  ${(props) => {
+    const size = getProperties({
+      defaultProp: 'md',
+      optionalProp: props.size,
+      obj: SIZE_MAP,
+    });
+    return `
+    width: ${size};
+    height: ${size};
+    `;
+  }}
 `;
-const ImageBox = styled.div<{ src: string }>`
+const Image = styled.img<{ src: string }>`
   width: 100%;
   height: 100%;
-  background-image: ${({ src }) => `url('${src}')`};
   background-size: contain;
 `;
