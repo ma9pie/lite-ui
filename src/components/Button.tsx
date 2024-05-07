@@ -58,7 +58,7 @@ const Button = ({
       {...props}
     >
       {children}
-      {!disableRipple && <Ripple></Ripple>}
+      {!disabled && !disableRipple && <Ripple></Ripple>}
     </Wrapper>
   );
 };
@@ -67,6 +67,7 @@ export default Button;
 
 const Wrapper = styled.button<ButtonProps>`
   position: relative;
+  width: fit-content;
   color: white;
   border: none;
   transition-property: all;

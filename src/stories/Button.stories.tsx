@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import type { Meta } from '@storybook/react';
 import React from 'react';
 
@@ -14,12 +15,21 @@ export default meta;
 
 const Component = (props: ButtonProps) => {
   return (
-    <div className="flex flex-col w-screen h-screen">
+    <Container>
       <Button {...props}>Button</Button>
-    </div>
+      <Button>Button</Button>
+      <Button>ButtonButtonButtonButton</Button>
+      <Button full>Button</Button>
+    </Container>
   );
 };
 
 export const Button_ = {
   render: Component,
 };
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
