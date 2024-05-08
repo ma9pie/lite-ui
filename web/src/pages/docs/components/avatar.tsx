@@ -15,8 +15,8 @@ const DocsComponentPage = () => {
           {
             property: 'size',
             type: ['xs', 'sm', 'md', 'lg', 'xl'],
-            description: 'Size of Avatar',
             defaultValue: 'md',
+            description: 'Size of Avatar',
           },
           {
             property: 'src',
@@ -26,8 +26,8 @@ const DocsComponentPage = () => {
           {
             property: 'alt',
             type: ['string'],
-            description: 'Image alternate',
             defaultValue: '',
+            description: 'Image alternate',
           },
         ]}
       ></DocsForm>

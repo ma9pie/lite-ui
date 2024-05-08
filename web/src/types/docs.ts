@@ -14,6 +14,6 @@ export interface ExampleComponent {
 export interface APITableRowItem {
   property: string;
   type: string[];
-  description?: string;
   defaultValue?: any;
+  description?: string;
 }
