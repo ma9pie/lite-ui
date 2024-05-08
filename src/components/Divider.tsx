@@ -5,10 +5,10 @@ import useEventListener from '@/hooks/useEventListener';
 import { DividerProps } from '@/types';
 
 const Divider = ({
-  y,
+  y = 0,
   size = 1,
   color = 'black',
-  dashed,
+  dashed = false,
   strokeDasharray = 2,
   ...props
 }: DividerProps) => {
