@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import React, { useRef } from 'react';
 
 import { ChipProps } from '@/types';
+import { getProperties } from '@/utils';
 
 const SIZE_MAP = {
   sm: { height: '24px', padding: '0px 8px', fontSize: '12px' },
@@ -12,8 +13,8 @@ const SIZE_MAP = {
 const Chip = ({
   variant = 'filled',
   size = 'md',
-  color = 'var(--neutral500)',
-  radius,
+  color = 'var(--neutral400)',
+  radius = 9999,
   children,
   ...props
 }: ChipProps) => {
@@ -25,7 +26,7 @@ const Chip = ({
       variant={variant}
       size={size}
       color={color}
-      radius={radius || 9999}
+      radius={radius}
       {...props}
     >
       {children}
@@ -48,9 +49,12 @@ const Wrapper = styled.div<ChipProps>`
         return `border: 2px solid ${color};`;
     }
   }}
-  ${({ size }) => {
-    const { height, padding, fontSize } =
-      SIZE_MAP[size || 'md'] || SIZE_MAP['md'];
+  ${(props) => {
+    const { height, padding, fontSize } = getProperties({
+      defaultProp: 'md',
+      optionalProp: props.size,
+      obj: SIZE_MAP,
+    });
     return `
     height: ${height};
     padding: ${padding};
