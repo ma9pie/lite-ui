@@ -46,5 +46,5 @@ const Container = styled.div`
 `;
 const GetStartedButton = styled(Button)`
   ${tw`!w-full`};
-  ${tw`sm:w-auto`};
+  ${tw`sm:!w-auto`};
 `;
