@@ -51,6 +51,7 @@ const CodeBlock = ({ theme = 'dark', code = '', ...props }: Props) => {
           lineHeight: 1.25,
           padding: 16,
           borderRadius: 12,
+          minHeight: 54,
         }}
       >
         {code}
