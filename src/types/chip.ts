@@ -9,7 +9,6 @@ export interface ChipProps extends DefaultProps {
   variant?: ChipVariant;
   size?: ChipSize;
   color?: string;
-  padding?: string;
   radius?: number;
   children?: ReactNode;
 }
