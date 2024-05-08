@@ -45,6 +45,6 @@ const Container = styled.div`
   ${tw`flex items-center flex-1`};
 `;
 const GetStartedButton = styled(Button)`
-  ${tw`w-full`};
+  ${tw`!w-full`};
   ${tw`sm:w-auto`};
 `;
