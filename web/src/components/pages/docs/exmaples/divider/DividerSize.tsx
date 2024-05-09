@@ -6,6 +6,7 @@ const App = () => {
     <div className="flex flex-col gap-4">
       <Divider size={1}></Divider>
       <Divider size={2}></Divider>
+      <Divider size={3}></Divider>
       <Divider size={4}></Divider>
     </div>
   );
@@ -21,6 +22,7 @@ const App = () => {
     <div className="flex flex-col gap-4">
       <Divider size={1}></Divider>
       <Divider size={2}></Divider>
+      <Divider size={3}></Divider>
       <Divider size={4}></Divider>
     </div>
   );
