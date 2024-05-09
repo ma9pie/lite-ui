@@ -37,13 +37,13 @@ const Switch = ({
 
   return (
     <Track
-      {...props}
       checked={checked}
       size={size}
       padding={padding}
       duration={duration}
       disabled={disabled}
       onClick={toggle}
+      {...props}
     >
       <Handle
         className={handleClassName}

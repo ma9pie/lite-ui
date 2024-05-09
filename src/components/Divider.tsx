@@ -47,7 +47,7 @@ const Divider = ({
   }
 
   return (
-    <Wrapper ref={ref} {...props} y={y} size={size} color={color}></Wrapper>
+    <Wrapper ref={ref} y={y} size={size} color={color} {...props}></Wrapper>
   );
 };
 

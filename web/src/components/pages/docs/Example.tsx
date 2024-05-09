@@ -9,12 +9,14 @@ interface Props {
   component: ExampleComponent;
 }
 
-const Example = ({ title, component }: Props) => {
+const Example = ({ title, component: Component }: Props) => {
   return (
     <Wrapper>
       <Title>{title}</Title>
-      <Container>{component()}</Container>
-      <CodeBlock theme="light" code={component.code}></CodeBlock>
+      <Container>
+        <Component></Component>
+      </Container>
+      <CodeBlock theme="light" code={Component.code}></CodeBlock>
     </Wrapper>
   );
 };
