@@ -22,7 +22,7 @@ export const DOCS_LIST = [
     label: 'Components',
     list: sortList([
       { key: 'flex', label: 'Flex', createdAt: '2024-05-09' },
-      { key: 'grid', label: 'Grid', createdAt: '' },
+      { key: 'grid', label: 'Grid', createdAt: '2024-05-10' },
       { key: 'divider', label: 'Divider', createdAt: '2024-05-08' },
       { key: 'spacer', label: 'Spacer', createdAt: '' },
       { key: 'switch', label: 'Switch', createdAt: '' },
