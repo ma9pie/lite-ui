@@ -12,11 +12,11 @@ function Spinner({
 }: SpinnerProps) {
   return (
     <Wrapper
-      {...props}
       size={size}
       color={color}
       lineWidth={lineWidth}
       duration={duration}
+      {...props}
     ></Wrapper>
   );
 }

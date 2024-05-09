@@ -3,13 +3,13 @@ import React from 'react';
 
 import { TableProps } from '@/types';
 
-const Table = ({ className, field, rows, minWidth }: TableProps) => {
+const Table = ({ style, field, rows, minWidth, ...props }: TableProps) => {
   if (!field || !rows) {
     return null;
   }
 
   return (
-    <Wrapper className={className} style={{ minWidth }}>
+    <Wrapper style={{ minWidth, ...style }} {...props}>
       <TableHead>
         <TableRow>
           {field.map(({ key, value, flex, align }) => (
