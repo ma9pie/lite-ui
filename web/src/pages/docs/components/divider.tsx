@@ -24,7 +24,7 @@ const DocsComponentPage = () => {
         name="Divider"
         description="Divider is a line that separates sections within a page."
         examples={[
-          { title: 'Y', component: DividerY },
+          { title: 'Margin y', component: DividerY },
           { title: 'Size', component: DividerSize },
           { title: 'Color', component: DividerColor },
           { title: 'Dashed', component: DividerDashed },
@@ -33,32 +33,32 @@ const DocsComponentPage = () => {
           {
             property: 'y',
             type: ['number'],
-            description: 'Margin value in y-axis direction.',
             defaultValue: 0,
+            description: 'Margin value in y-axis direction.',
           },
           {
             property: 'size',
             type: ['number'],
-            description: 'Thickness of line.',
             defaultValue: 1,
+            description: 'Thickness of line.',
           },
           {
             property: 'color',
             type: ['string'],
-            description: 'Color of line.',
             defaultValue: 'black',
+            description: 'Color of line.',
           },
           {
             property: 'dashed',
             type: ['boolean'],
-            description: 'Dashed style line.',
             defaultValue: false,
+            description: 'Dashed style line.',
           },
           {
             property: 'strokeDasharray',
             type: ['number', 'string'],
-            description: 'Dashed spacing of line.',
             defaultValue: 2,
+            description: 'Dashed spacing of line.',
           },
         ]}
       ></DocsForm>

@@ -4,6 +4,7 @@ import React from 'react';
 import CodeBlock from '@/components/common/CodeBlock';
 import { Text } from '@/components/common/text';
 import DocsLayout from '@/components/layouts/DocsLayout';
+import Head from '@/components/layouts/Head';
 
 const REQUIREMENTS = [
   { key: 'react', value: 'React 18 or later' },
@@ -27,6 +28,8 @@ export default Component;
 const DocsGuidePage = () => {
   return (
     <DocsLayout>
+      <Head page="Installation"></Head>
+
       <Flex col gap={32}>
         <Flex col gap={16}>
           <Text.Title>Installation</Text.Title>

@@ -3,10 +3,13 @@ import React from 'react';
 
 import { Text } from '@/components/common/text';
 import DocsLayout from '@/components/layouts/DocsLayout';
+import Head from '@/components/layouts/Head';
 
 const DocsGuidePage = () => {
   return (
     <DocsLayout>
+      <Head page="Design Principles"></Head>
+
       <Flex col gap={32}>
         <Text.Title>Design Principles</Text.Title>
         <Text>

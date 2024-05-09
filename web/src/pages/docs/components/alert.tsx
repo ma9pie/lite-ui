@@ -18,20 +18,20 @@ const DocsComponentPage = () => {
           {
             property: 'status',
             type: ['success', 'info', 'warn', 'error'],
-            description: 'Type of Alert styles',
             defaultValue: 'success',
+            description: 'Type of Alert styles',
           },
           {
             property: 'iconSize',
             type: ['number'],
-            description: 'Size of icon',
             defaultValue: 20,
+            description: 'Size of icon',
           },
           {
             property: 'hideIcon',
             type: ['boolean'],
-            description: 'Hide icon',
             defaultValue: false,
+            description: 'Hide icon',
           },
           {
             property: 'children',
