@@ -1,11 +1,13 @@
 import React from 'react';
 import tw, { styled } from 'twin.macro';
 
+import Head from '@/components/layouts/Head';
 import HomeLayout from '@/components/layouts/HomeLayout';
 
 const Custom404 = () => {
   return (
     <HomeLayout>
+      <Head page="404"></Head>
       <Container>
         <NumberText>404</NumberText>
         <VerticalLine></VerticalLine>

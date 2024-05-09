@@ -2,6 +2,7 @@ import React from 'react';
 import tw, { styled } from 'twin.macro';
 
 import { Text } from '@/components/common/text';
+import Head from '@/components/layouts/Head';
 import APITable from '@/components/pages/docs/APITable';
 import Example from '@/components/pages/docs/Example';
 import ImportSource from '@/components/pages/docs/ImportSource';
@@ -17,6 +18,7 @@ interface Props {
 const DocsForm = ({ name, description, examples, apiData }: Props) => {
   return (
     <Wrapper>
+      <Head page={name}></Head>
       <Section>
         <Text.Title>{name}</Text.Title>
         <Text>{description}</Text>
