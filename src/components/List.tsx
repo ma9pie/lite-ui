@@ -19,8 +19,10 @@ export default List;
 // FIXME: Need efficient code
 const Wrapper = styled.div<ListProps>`
   ul {
+    margin-left: 20px;
     list-style-type: disc;
     ul {
+      margin-left: ${({ tabWidth }) => `${tabWidth}px`};
       list-style-type: circle;
       ul {
         list-style-type: square;
@@ -35,7 +37,6 @@ const Wrapper = styled.div<ListProps>`
         }
       }
     }
-    margin-left: ${({ tabWidth }) => `${tabWidth}px`};
   }
   li {
     margin-top: ${({ gap }) => `${gap}px`};
