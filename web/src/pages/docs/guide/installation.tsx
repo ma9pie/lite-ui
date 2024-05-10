@@ -6,11 +6,6 @@ import { Text } from '@/components/common/text';
 import DocsLayout from '@/components/layouts/DocsLayout';
 import Head from '@/components/layouts/Head';
 
-const REQUIREMENTS = [
-  { key: 'react', value: 'React 18 or later' },
-  { key: 'tailwindCSS', value: 'TailwindCSS 3.4 or later' },
-];
-
 const USAGE_CODE = `import { Button } from '@ma9pie/lite-ui';
 import React from 'react';
 
@@ -37,10 +32,15 @@ const DocsGuidePage = () => {
             To use Lite UI, enter the following command in your project
             terminal.
           </Text>
-          <div>
+          <Flex col gap={8}>
             <Text>Requirements:</Text>
-            <List list={REQUIREMENTS}></List>
-          </div>
+            <List>
+              <List.Ul>
+                <List.Li>React 18 or later</List.Li>
+                <List.Li>TailwindCSS 3.4 or later</List.Li>
+              </List.Ul>
+            </List>
+          </Flex>
 
           <Code code="npm i @ma9pie/lite-ui"></Code>
         </Flex>
