@@ -1,3 +1,4 @@
+import { Flex } from '@ma9pie/lite-ui';
 import React from 'react';
 import tw, { styled } from 'twin.macro';
 
@@ -19,6 +20,7 @@ const DocsForm = ({ name, description, examples, apiData }: Props) => {
   return (
     <Wrapper>
       <Head page={name}></Head>
+
       <Section>
         <Text.Title>{name}</Text.Title>
         <Text>{description}</Text>
@@ -36,9 +38,40 @@ const DocsForm = ({ name, description, examples, apiData }: Props) => {
 
       <Section>
         <Text.SubTitle>API</Text.SubTitle>
-        <TableWrapper className="scroll-x">
-          <APITable rows={apiData}></APITable>
-        </TableWrapper>
+
+        <Flex col gap={16}>
+          <Text>{`${name} props`}</Text>
+          <TableWrapper className="scroll-x">
+            <APITable rows={apiData}></APITable>
+          </TableWrapper>
+        </Flex>
+
+        <Flex col gap={16}>
+          <Text>Default props</Text>
+          <TableWrapper className="scroll-x">
+            <APITable
+              rows={[
+                {
+                  property: 'key',
+                  type: ['string'],
+                  description: 'Unique key that identifies repeated elements.',
+                },
+                {
+                  property: 'className',
+                  type: ['string'],
+                  description:
+                    'Attribute used to add classes to HTML elements.',
+                },
+                {
+                  property: 'style',
+                  type: ['CSSProperties'],
+                  description:
+                    'Attribute used to apply CSS styles directly to HTML elements.',
+                },
+              ]}
+            ></APITable>
+          </TableWrapper>
+        </Flex>
       </Section>
     </Wrapper>
   );
