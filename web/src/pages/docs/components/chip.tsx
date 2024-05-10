@@ -14,7 +14,7 @@ const DocsComponentPage = () => {
     <DocsLayout>
       <DocsForm
         name="Chip"
-        description="Chip is a component that can be used as a label or badge."
+        description="Chips are used as labels or badges."
         examples={[
           { title: 'Varient', component: ChipVarient },
           { title: 'Size', component: ChipSize },

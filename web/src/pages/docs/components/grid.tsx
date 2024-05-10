@@ -13,7 +13,7 @@ const DocsComponentPage = () => {
     <DocsLayout>
       <DocsForm
         name="Grid"
-        description="Grid is a layout component that arranges elements by specifying columns."
+        description="Grid is used to align elements by specifying the column count."
         examples={[
           { title: 'Auto fill', component: GridAutoFill },
           { title: 'RepeatCount', component: GridRepeatCount },

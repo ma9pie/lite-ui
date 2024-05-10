@@ -16,7 +16,7 @@ const DocsComponentPage = () => {
     <DocsLayout>
       <DocsForm
         name="Flex"
-        description="Flex is a component for aligning layout containers."
+        description="Flex is used to align elements."
         examples={[
           { title: 'Flex', component: FlexFlex },
           { title: 'Wrap', component: FlexWrap },

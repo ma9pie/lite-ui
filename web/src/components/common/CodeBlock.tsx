@@ -16,12 +16,18 @@ import tw, { styled } from 'twin.macro';
 interface Props {
   className?: string;
   theme?: 'dark' | 'light';
+  hideCopyIcon?: boolean;
   code?: string;
 }
 
 let pid: ReturnType<typeof setTimeout>;
 
-const CodeBlock = ({ theme = 'dark', code = '', ...props }: Props) => {
+const CodeBlock = ({
+  theme = 'dark',
+  hideCopyIcon,
+  code = '',
+  ...props
+}: Props) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const isDarkTheme = useMemo(() => theme === 'dark', [theme]);
@@ -57,15 +63,17 @@ const CodeBlock = ({ theme = 'dark', code = '', ...props }: Props) => {
         {code}
       </SyntaxHighlighter>
 
-      <CopyToClipboard text={code} onCopy={copyCode}>
-        <IconWrapper isCopied={isCopied} isDarkTheme={isDarkTheme}>
-          {isCopied ? (
-            <FaCheck size={20} color={iconColor}></FaCheck>
-          ) : (
-            <FaRegCopy size={20} color={iconColor}></FaRegCopy>
-          )}
-        </IconWrapper>
-      </CopyToClipboard>
+      {!hideCopyIcon && (
+        <CopyToClipboard text={code} onCopy={copyCode}>
+          <IconWrapper isCopied={isCopied} isDarkTheme={isDarkTheme}>
+            {isCopied ? (
+              <FaCheck size={20} color={iconColor}></FaCheck>
+            ) : (
+              <FaRegCopy size={20} color={iconColor}></FaRegCopy>
+            )}
+          </IconWrapper>
+        </CopyToClipboard>
+      )}
     </Wrapper>
   );
 };

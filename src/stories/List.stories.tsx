@@ -4,66 +4,9 @@ import React from 'react';
 import { List } from '@/components';
 import { ListProps } from '@/types';
 
-// for test
-const generateTestData = (key: string, len: number) => {
-  return Array(len)
-    .fill(null)
-    .map((_, idx) => {
-      const value = `${key}-${idx + 1}`;
-      return { key: value, value: value };
-    });
-};
-
-const TEST_DATA = [
-  {
-    key: '1',
-    value: '1',
-    children: [
-      ...generateTestData('1', 2),
-      {
-        key: '1-3',
-        value: '1-3',
-        children: [
-          ...generateTestData('1-3', 2),
-          {
-            key: '1-3-3',
-            value: '1-3-3',
-            children: generateTestData('1-3-3', 2),
-          },
-        ],
-      },
-    ],
-  },
-  {
-    key: '2',
-    value: '2',
-    children: [
-      ...generateTestData('2', 2),
-      {
-        key: '2-3',
-        value: '2-3',
-        children: generateTestData('2-3', 3),
-      },
-    ],
-  },
-  {
-    key: '3',
-    value: '3',
-    children: generateTestData('3', 4),
-  },
-  {
-    key: '4',
-    value: '4',
-  },
-  {
-    key: '5',
-    value: '5',
-  },
-];
-
 const meta = {
   title: 'List',
-  args: { list: TEST_DATA, tabWidth: 16, gap: 8 },
+  args: { tabWidth: 16, gap: 8 },
   component: List,
 } satisfies Meta;
 
@@ -72,7 +15,47 @@ export default meta;
 const Component = (props: ListProps) => {
   return (
     <>
-      <List {...props}></List>
+      <List {...props}>
+        <List.Ul>
+          <List.Li>Lorem ipsum dolor</List.Li>
+          <List.Li>sit amet consectetur</List.Li>
+          <List.Li>adipisicing elit Possimus</List.Li>
+          <List.Ul>
+            <List.Li>repellat nemo beatae</List.Li>
+            <List.Li>fugiat illo minus</List.Li>
+            <List.Li>labore ipsum repellendus</List.Li>
+            <List.Ul>
+              <List.Li>aut ullam quisquam</List.Li>
+              <List.Li>consequatur dolore hic</List.Li>
+              <List.Li>magni explicabo cupiditate</List.Li>
+            </List.Ul>
+          </List.Ul>
+        </List.Ul>
+      </List>
+
+      <List {...props}>
+        <List.Ul>
+          <List.Li>1</List.Li>
+          <List.Ul>
+            <List.Li>1</List.Li>
+            <List.Ul>
+              <List.Li>1</List.Li>
+              <List.Ul>
+                <List.Li>1</List.Li>
+                <List.Ul>
+                  <List.Li>1</List.Li>
+                  <List.Ul>
+                    <List.Li>1</List.Li>
+                    <List.Ul>
+                      <List.Li>1</List.Li>
+                    </List.Ul>
+                  </List.Ul>
+                </List.Ul>
+              </List.Ul>
+            </List.Ul>
+          </List.Ul>
+        </List.Ul>
+      </List>
     </>
   );
 };
