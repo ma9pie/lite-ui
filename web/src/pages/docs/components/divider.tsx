@@ -22,7 +22,7 @@ const DocsComponentPage = () => {
     <DocsLayout>
       <DocsForm
         name="Divider"
-        description="Divider is a line that separates sections within a page."
+        description="Divider is used as a line to separate sections within a page."
         examples={[
           { title: 'Margin y', component: DividerY },
           { title: 'Size', component: DividerSize },

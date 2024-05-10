@@ -9,7 +9,7 @@ const DocsComponentPage = () => {
     <DocsLayout>
       <DocsForm
         name="Avatar"
-        description="Used to represent user's profile, symbol image or icon."
+        description="Avatar is used to display the user's profile, symbol image or icon."
         examples={[{ title: 'Size', component: AvatarSize }]}
         apiData={[
           {

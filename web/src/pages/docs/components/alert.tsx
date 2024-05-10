@@ -9,7 +9,7 @@ const DocsComponentPage = () => {
     <DocsLayout>
       <DocsForm
         name="Alert"
-        description="Display messages that require attention."
+        description="Alert is used to display messages that require attention."
         examples={[
           { title: 'Status', component: AlertStatus },
           { title: 'Icon', component: AlertIcon },

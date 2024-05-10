@@ -16,7 +16,7 @@ const DocsComponentPage = () => {
     <DocsLayout>
       <DocsForm
         name="Button"
-        description="Buttons the user can click."
+        description="Button is used to trigger an action or perform an operation when clicked."
         examples={[
           { title: 'Full', component: ButtonFull },
           { title: 'Size', component: ButtonSize },
