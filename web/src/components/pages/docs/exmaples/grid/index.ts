@@ -1,2 +1,3 @@
-export { default as GridCol } from './GridCol';
-export { default as GridGap } from './GridGap';
+export { default as GridAutoFill } from './GridAutoFill';
+export { default as GridRepeatCount } from './GridRepeatCount';
+export { default as GridTracks } from './GridTracks';
