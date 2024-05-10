@@ -5,17 +5,19 @@ import CodeBlock from '@/components/common/CodeBlock';
 import { ExampleComponent } from '@/types';
 
 interface Props {
-  title: string;
+  title?: string;
   component: ExampleComponent;
 }
 
 const Example = ({ title, component: Component }: Props) => {
   return (
     <Wrapper>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
+
       <Container>
         <Component></Component>
       </Container>
+
       <CodeBlock theme="light" code={Component.code}></CodeBlock>
     </Wrapper>
   );

@@ -1,10 +1,12 @@
+import { ReactNode } from 'react';
+
 export interface DocsListItem {
   key: string;
   label: string;
   createdAt: string;
 }
 export interface ExampleListItem {
-  title: string;
+  title?: string;
   component: ExampleComponent;
 }
 export interface ExampleComponent {
@@ -15,5 +17,5 @@ export interface APITableRowItem {
   property: string;
   type: string[];
   defaultValue?: any;
-  description?: string;
+  description?: ReactNode;
 }
