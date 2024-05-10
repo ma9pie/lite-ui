@@ -1,32 +1,23 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-import { ListProps, ListTreeNode } from '@/types';
+import { ListProps } from '@/types';
 
-const List = ({ list, tabWidth = 16, gap = 8 }: ListProps) => {
-  const generateNestedList = (data?: ListTreeNode[]) => {
-    if (!data) {
-      return null;
-    }
-    return (
-      <Ul tabWidth={tabWidth}>
-        {data.map(({ key, value, children }) => (
-          <Li key={key} gap={gap}>
-            {value}
-            {generateNestedList(children)}
-          </Li>
-        ))}
-      </Ul>
-    );
-  };
-
-  return <Wrapper>{generateNestedList(list)}</Wrapper>;
+const List = ({ tabWidth = 16, gap = 8, children, ...props }: ListProps) => {
+  return (
+    <Wrapper tabWidth={tabWidth} gap={gap} {...props}>
+      {children}
+    </Wrapper>
+  );
 };
+
+List.Ul = styled.ul``;
+List.Li = styled.li``;
 
 export default List;
 
 // FIXME: Need efficient code
-const Wrapper = styled.div`
+const Wrapper = styled.div<ListProps>`
   ul {
     list-style-type: disc;
     ul {
@@ -44,14 +35,9 @@ const Wrapper = styled.div`
         }
       }
     }
-  }
-`;
-const Ul = styled.ul<{ tabWidth: number }>`
-  margin-left: 16px;
-  ul {
     margin-left: ${({ tabWidth }) => `${tabWidth}px`};
   }
-`;
-const Li = styled.li<{ gap: number }>`
-  margin-top: ${({ gap }) => `${gap}px`};
+  li {
+    margin-top: ${({ gap }) => `${gap}px`};
+  }
 `;
