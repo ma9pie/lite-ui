@@ -10,7 +10,6 @@ const Grid = ({
   gap,
   ...props
 }: GridProps) => {
-  console.log({ repeatCount, tracks });
   return (
     <Wrapper
       repeatCount={repeatCount}

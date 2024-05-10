@@ -2,23 +2,35 @@ import React from 'react';
 
 import DocsLayout from '@/components/layouts/DocsLayout';
 import DocsForm from '@/components/pages/docs/DocsForm';
-import { GridCol, GridGap } from '@/components/pages/docs/exmaples/grid';
+import {
+  GridAutoFill,
+  GridRepeatCount,
+  GridTracks,
+} from '@/components/pages/docs/exmaples/grid';
 
 const DocsComponentPage = () => {
   return (
     <DocsLayout>
       <DocsForm
-        name="Flex"
-        description="Flex is a component for aligning layout containers."
+        name="Grid"
+        description="Grid is a layout component that arranges elements by specifying columns."
         examples={[
-          { title: 'Col', component: GridCol },
-          { title: 'Gap', component: GridGap },
+          { title: 'Auto fill', component: GridAutoFill },
+          { title: 'RepeatCount', component: GridRepeatCount },
+          { title: 'Tracks', component: GridTracks },
         ]}
         apiData={[
           {
-            property: 'col',
-            type: ['number'],
-            description: 'Repeat count of grid-template-columns properties.',
+            property: 'repeatCount',
+            type: ['number', 'string'],
+            description: 'Repeat count in grid-template-columns property.',
+            defaultValue: 1,
+          },
+          {
+            property: 'tracks',
+            type: ['string'],
+            description: 'Repeat count in grid-template-columns property.',
+            defaultValue: '1fr',
           },
           {
             property: 'gap',
