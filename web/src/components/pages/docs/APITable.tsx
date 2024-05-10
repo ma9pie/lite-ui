@@ -10,6 +10,7 @@ interface Props {
 const APITable = ({ rows }: Props) => {
   return (
     <Table
+      className="text-sm"
       minWidth={600}
       field={[
         { key: 'property', value: 'Property', flex: 2 },
