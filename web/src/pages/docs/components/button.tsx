@@ -42,35 +42,35 @@ const DocsComponentPage = () => {
             property: 'radius',
             type: ['none', 'sm', 'md', 'lg', 'full'],
             defaultValue: 'md',
-            description: `Button's border radius`,
+            description: `Button's border radius.`,
           },
           {
             property: 'color',
             type: ['default', 'primary'],
             defaultValue: 'default',
-            description: `Button's color`,
+            description: `Button's color.`,
           },
           {
             property: 'disabled',
             type: ['boolean'],
             defaultValue: false,
-            description: 'Disabled button',
+            description: 'Disabled button.',
           },
           {
             property: 'disableRipple',
             type: ['boolean'],
             defaultValue: false,
-            description: 'Inactive ripple animation',
+            description: 'Inactive ripple animation.',
           },
           {
             property: 'children',
             type: ['ReactNode'],
-            description: `Button's content`,
+            description: `Button's content.`,
           },
           {
             property: 'onClick',
             type: ['(...args: any) => void'],
-            description: `Button's click event`,
+            description: `Button's click event.`,
           },
         ]}
       ></DocsForm>
