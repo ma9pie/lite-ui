@@ -1,12 +1,10 @@
 import { ReactNode } from 'react';
 
-import { AlignItem, DefaultProps, JustifyContent } from '@/types';
+import { DefaultProps } from '@/types';
 
 export interface GridProps extends DefaultProps {
-  row?: number;
-  col?: number;
+  repeatCount?: number | string;
+  tracks?: string;
   gap?: number;
-  justify?: JustifyContent;
-  items?: AlignItem;
   children?: ReactNode;
 }

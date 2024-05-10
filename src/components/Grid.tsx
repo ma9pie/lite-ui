@@ -2,23 +2,19 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 import { GridProps } from '@/types';
-import { alignItem, justifyContent } from '@/utils';
 
 const Grid = ({
   style,
-  row,
-  col,
+  repeatCount = 1,
+  tracks = '1fr',
   gap,
-  justify,
-  items,
   ...props
 }: GridProps) => {
+  console.log({ repeatCount, tracks });
   return (
     <Wrapper
-      row={row}
-      col={col}
-      justify={justify}
-      items={items}
+      repeatCount={repeatCount}
+      tracks={tracks}
       style={{ gap, ...style }}
       {...props}
     >
@@ -31,9 +27,6 @@ export default Grid;
 
 const Wrapper = styled.div<GridProps>`
   display: grid;
-  grid-template-rows: ${({ row }) => row && `repeat(${row}, minmax(0, 1fr))`};
-  grid-template-columns: ${({ col }) =>
-    col && `repeat(${col}, minmax(0, 1fr))`};
-  justify-content: ${({ justify }) => justifyContent(justify)};
-  align-items: ${({ items }) => alignItem(items)};
+  grid-template-columns: ${({ repeatCount, tracks }) =>
+    `repeat(${repeatCount}, ${tracks})`};
 `;

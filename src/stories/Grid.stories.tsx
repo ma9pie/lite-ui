@@ -1,20 +1,14 @@
+import styled from '@emotion/styled';
 import type { Meta } from '@storybook/react';
 import React from 'react';
 
 import { Grid } from '@/components';
-import { Box } from '@/components/test';
 import { GridProps } from '@/types';
 
 const meta = {
   title: 'Grid',
   args: {
-    className: 'border-black',
-    style: {
-      width: 256,
-      height: 256,
-    },
-    row: 2,
-    col: 2,
+    repeatCount: 1,
     gap: 8,
   },
   component: Grid,
@@ -25,12 +19,12 @@ export default meta;
 const Component = (props: GridProps) => {
   return (
     <Grid {...props}>
-      <Box></Box>
-      <Box></Box>
-      <Box></Box>
-      <Box></Box>
-      <Box></Box>
-      <Box></Box>
+      <Square></Square>
+      <Square></Square>
+      <Square></Square>
+      <Square></Square>
+      <Square></Square>
+      <Square></Square>
     </Grid>
   );
 };
@@ -38,3 +32,8 @@ const Component = (props: GridProps) => {
 export const Grid_ = {
   render: Component,
 };
+
+const Square = styled.div`
+  height: 64px;
+  background-color: gray;
+`;
