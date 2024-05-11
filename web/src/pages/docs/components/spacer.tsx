@@ -18,14 +18,14 @@ const DocsComponentPage = () => {
           {
             property: 'x',
             type: ['number'],
-            defaultValue: 1,
             description: 'x-axis spacing.',
+            defaultValue: 1,
           },
           {
             property: 'y',
             type: ['number'],
-            defaultValue: 1,
             description: 'y-axis spacing.',
+            defaultValue: 1,
           },
         ]}
       ></DocsForm>

@@ -29,48 +29,50 @@ const DocsComponentPage = () => {
           {
             property: 'full',
             type: ['boolean'],
-            defaultValue: false,
             description: 'Full width button.',
+            defaultValue: false,
           },
           {
             property: 'size',
             type: ['sm', 'md', 'lg'],
-            defaultValue: 'md',
             description: `Button's size.`,
+            defaultValue: 'md',
           },
           {
             property: 'radius',
             type: ['none', 'sm', 'md', 'lg', 'full'],
-            defaultValue: 'md',
             description: `Button's border radius.`,
+            defaultValue: 'md',
           },
           {
             property: 'color',
             type: ['default', 'primary'],
-            defaultValue: 'default',
             description: `Button's color.`,
+            defaultValue: 'default',
           },
           {
             property: 'disabled',
             type: ['boolean'],
-            defaultValue: false,
             description: 'Disabled button.',
+            defaultValue: false,
           },
           {
             property: 'disableRipple',
             type: ['boolean'],
-            defaultValue: false,
             description: 'Inactive ripple animation.',
+            defaultValue: false,
           },
           {
             property: 'children',
             type: ['ReactNode'],
             description: `Button's content.`,
+            defaultValue: undefined,
           },
           {
             property: 'onClick',
             type: ['(...args: any) => void'],
             description: `Button's click event.`,
+            defaultValue: undefined,
           },
         ]}
       ></DocsForm>

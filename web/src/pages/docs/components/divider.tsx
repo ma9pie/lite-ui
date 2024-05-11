@@ -33,32 +33,32 @@ const DocsComponentPage = () => {
           {
             property: 'y',
             type: ['number'],
-            defaultValue: 0,
             description: 'Margin value in y-axis direction.',
+            defaultValue: 0,
           },
           {
             property: 'size',
             type: ['number'],
-            defaultValue: 1,
             description: 'Thickness of line.',
+            defaultValue: 1,
           },
           {
             property: 'color',
             type: ['string'],
-            defaultValue: 'black',
             description: 'Color of line.',
+            defaultValue: 'black',
           },
           {
             property: 'dashed',
             type: ['boolean'],
-            defaultValue: false,
             description: 'Dashed style line.',
+            defaultValue: false,
           },
           {
             property: 'strokeDasharray',
             type: ['number', 'string'],
-            defaultValue: 2,
             description: 'Dashed spacing of line.',
+            defaultValue: 2,
           },
         ]}
       ></DocsForm>

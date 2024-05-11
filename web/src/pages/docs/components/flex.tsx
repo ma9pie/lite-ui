@@ -30,32 +30,38 @@ const DocsComponentPage = () => {
             property: 'flex',
             type: ['number'],
             description: 'CSS flex properties.',
+            defaultValue: undefined,
           },
           {
             property: 'wrap',
             type: ['wrap', 'wrap-reverse', 'nowrap'],
             description: 'CSS flex-wrap properties.',
+            defaultValue: undefined,
           },
           {
             property: 'col',
             type: ['boolean'],
             description:
               'Properties for whether the flex direction is vertical or not.',
+            defaultValue: undefined,
           },
           {
             property: 'gap',
             type: ['number', 'string'],
             description: 'Spacing between elements.',
+            defaultValue: undefined,
           },
           {
             property: 'justify',
             type: ['start', 'end', 'center', 'between', 'evenly'],
             description: 'CSS justify-content properties.',
+            defaultValue: undefined,
           },
           {
             property: 'items',
             type: ['start', 'end', 'center'],
             description: 'CSS align-items properties.',
+            defaultValue: undefined,
           },
         ]}
       ></DocsForm>

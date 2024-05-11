@@ -25,16 +25,19 @@ const DocsComponentPage = () => {
             property: 'tabWidth',
             type: ['number'],
             description: 'Tab size.',
+            defaultValue: undefined,
           },
           {
             property: 'gap',
             type: ['number'],
             description: 'Spacing between list item.',
+            defaultValue: undefined,
           },
           {
             property: 'children',
             type: ['ReactNode'],
             description: 'List content.',
+            defaultValue: undefined,
           },
         ]}
       ></DocsForm>

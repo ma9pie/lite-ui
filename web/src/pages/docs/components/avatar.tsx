@@ -15,19 +15,20 @@ const DocsComponentPage = () => {
           {
             property: 'size',
             type: ['xs', 'sm', 'md', 'lg', 'xl'],
-            defaultValue: 'md',
             description: 'Size of Avatar.',
+            defaultValue: 'md',
           },
           {
             property: 'src',
             type: ['string'],
             description: 'Image source.',
+            defaultValue: undefined,
           },
           {
             property: 'alt',
             type: ['string'],
-            defaultValue: '',
             description: 'Image alternate.',
+            defaultValue: '',
           },
         ]}
       ></DocsForm>

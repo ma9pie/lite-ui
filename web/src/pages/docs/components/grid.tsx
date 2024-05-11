@@ -36,6 +36,7 @@ const DocsComponentPage = () => {
             property: 'gap',
             type: ['number', 'string'],
             description: 'Spacing between elements.',
+            defaultValue: undefined,
           },
         ]}
       ></DocsForm>
