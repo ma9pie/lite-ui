@@ -29,8 +29,8 @@ const DocsForm = ({ name, description, examples, apiData }: Props) => {
 
       <Section>
         <Text.SubTitle>Examples</Text.SubTitle>
-        {examples.map(({ title, component }) => (
-          <div key={title}>
+        {examples.map(({ title, component }, idx) => (
+          <div key={idx}>
             <Example title={title} component={component}></Example>
           </div>
         ))}

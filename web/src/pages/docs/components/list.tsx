@@ -16,7 +16,7 @@ const DocsComponentPage = () => {
         name="List"
         description="Used to represent user's profile, symbol image or icon."
         examples={[
-          { component: ListGeneral },
+          { title: undefined, component: ListGeneral },
           { title: 'Tab width', component: ListTabWidth },
           { title: 'Gap', component: ListGap },
         ]}
