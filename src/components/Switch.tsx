@@ -7,6 +7,7 @@ const Switch = ({
   defaultChecked = false,
   size = 32,
   trackPadding = 4,
+  trackColor = 'var(--neutral600)',
   duration = 150,
   disabled = false,
   onChange = () => {},
@@ -40,6 +41,7 @@ const Switch = ({
       checked={checked}
       size={size}
       padding={padding}
+      backgroundColor={trackColor}
       duration={duration}
       disabled={disabled}
       onClick={toggle}
@@ -64,10 +66,10 @@ const Track = styled.div<TrackProps>`
   height: ${({ size }) => `${size}px`};
   padding: ${({ padding }) => `${padding}px`};
   border-radius: ${({ size }) => `${size}px`};
-  background-color: ${({ checked }) =>
-    checked ? 'var(--neutral600)' : ' var(--neutral300)'};
+  background-color: ${({ checked, backgroundColor }) =>
+    checked ? backgroundColor : 'var(--neutral300)'};
   cursor: pointer;
-  transition-property: background-color;
+  transition-property: background-color, opacity;
   transition-timing-function: ease-in-out;
   transition-duration: ${({ duration }) => `${duration}ms`};
   pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')};
@@ -117,4 +119,5 @@ const Handle = styled.div<HandleProps>`
   transition-property: left;
   transition-timing-function: ease-in-out;
   transition-duration: ${({ duration }) => `${duration}ms`};
+  z-index: 10;
 `;
