@@ -18,25 +18,26 @@ const DocsComponentPage = () => {
           {
             property: 'status',
             type: ['success', 'info', 'warn', 'error'],
-            defaultValue: 'success',
             description: 'Type of Alert styles.',
+            defaultValue: 'success',
           },
           {
             property: 'iconSize',
             type: ['number'],
-            defaultValue: 20,
             description: 'Size of icon.',
+            defaultValue: 20,
           },
           {
             property: 'hideIcon',
             type: ['boolean'],
-            defaultValue: false,
             description: 'Hide icon.',
+            defaultValue: false,
           },
           {
             property: 'children',
             type: ['ReactNode'],
             description: 'Alert content.',
+            defaultValue: undefined,
           },
         ]}
       ></DocsForm>

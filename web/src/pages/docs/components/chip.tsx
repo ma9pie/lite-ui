@@ -25,26 +25,26 @@ const DocsComponentPage = () => {
           {
             property: 'varient',
             type: ['filled', 'outlined'],
-            defaultValue: 'filled',
             description: 'The chip appearance style.',
+            defaultValue: 'filled',
           },
           {
             property: 'size',
             type: ['sm', 'md', 'lg'],
-            defaultValue: 'md',
             description: 'The size of the chip.',
+            defaultValue: 'md',
           },
           {
             property: 'color',
             type: ['string'],
-            defaultValue: '#a3a3a3',
             description: 'The color of the chip.',
+            defaultValue: '#a3a3a3',
           },
           {
             property: 'radius',
             type: ['number'],
-            defaultValue: 9999,
             description: 'The radius of the chip.',
+            defaultValue: 9999,
           },
         ]}
       ></DocsForm>
