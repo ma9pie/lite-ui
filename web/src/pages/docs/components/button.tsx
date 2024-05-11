@@ -71,7 +71,7 @@ const DocsComponentPage = () => {
           {
             property: 'onClick',
             type: ['(...args: any) => void'],
-            description: `Button's click event.`,
+            description: `onClick event.`,
             defaultValue: undefined,
           },
         ]}
