@@ -17,7 +17,7 @@ const DocsComponentPage = () => {
         description="Used to represent user's profile, symbol image or icon."
         examples={[
           { component: ListGeneral },
-          { title: 'TabWidth', component: ListTabWidth },
+          { title: 'Tab width', component: ListTabWidth },
           { title: 'Gap', component: ListGap },
         ]}
         apiData={[

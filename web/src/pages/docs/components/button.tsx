@@ -23,7 +23,7 @@ const DocsComponentPage = () => {
           { title: 'Radius', component: ButtonRadius },
           { title: 'Color', component: ButtonColor },
           { title: 'Disabled', component: ButtonDisabled },
-          { title: 'DisableRipple', component: ButtonDisableRipple },
+          { title: 'Disable ripple', component: ButtonDisableRipple },
         ]}
         apiData={[
           {
