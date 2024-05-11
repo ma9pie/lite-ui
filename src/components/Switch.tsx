@@ -95,11 +95,15 @@ const Track = styled.div<TrackProps>`
   }
   .switch-checked {
     transform-origin: right;
-    animation: switch-checked 0.2s ease-in-out forwards;
+    animation-name: switch-checked;
+    animation-timing-function: ease-in-out;
+    animation-duration: ${({ duration }) => `${duration}ms`};
   }
   .switch-unchecked {
     transform-origin: left;
-    animation: switch-unchecked 0.2s ease-in-out forwards;
+    animation-name: switch-unchecked;
+    animation-timing-function: ease-in-out;
+    animation-duration: ${({ duration }) => `${duration}ms`};
   }
 `;
 const Handle = styled.div<HandleProps>`
