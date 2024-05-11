@@ -5,7 +5,7 @@ import DocsLayout from '@/components/layouts/DocsLayout';
 import DocsForm from '@/components/pages/docs/DocsForm';
 import {
   ListGap,
-  ListList,
+  ListGeneral,
   ListTabWidth,
 } from '@/components/pages/docs/exmaples/list';
 
@@ -16,7 +16,7 @@ const DocsComponentPage = () => {
         name="List"
         description="Used to represent user's profile, symbol image or icon."
         examples={[
-          { title: 'List', component: ListList },
+          { component: ListGeneral },
           { title: 'TabWidth', component: ListTabWidth },
           { title: 'Gap', component: ListGap },
         ]}
