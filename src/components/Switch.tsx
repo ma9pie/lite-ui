@@ -31,6 +31,9 @@ const Switch = ({
   );
 
   const toggle = () => {
+    if (disabled) {
+      return;
+    }
     const _checked = !checked;
     setChecked(_checked);
     onChange(_checked);
@@ -68,11 +71,10 @@ const Track = styled.div<TrackProps>`
   border-radius: ${({ size }) => `${size}px`};
   background-color: ${({ checked, backgroundColor }) =>
     checked ? backgroundColor : 'var(--neutral300)'};
-  cursor: pointer;
   transition-property: background-color, opacity;
   transition-timing-function: ease-in-out;
   transition-duration: ${({ duration }) => `${duration}ms`};
-  pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   @keyframes switch-checked {
     0% {
       transform: scaleX(100%);
