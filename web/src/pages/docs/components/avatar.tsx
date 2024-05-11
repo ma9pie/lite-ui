@@ -2,7 +2,10 @@ import React from 'react';
 
 import DocsLayout from '@/components/layouts/DocsLayout';
 import DocsForm from '@/components/pages/docs/DocsForm';
-import { AvatarSize } from '@/components/pages/docs/exmaples/avatar';
+import {
+  AvatarFallback,
+  AvatarSize,
+} from '@/components/pages/docs/exmaples/avatar';
 
 const DocsComponentPage = () => {
   return (
@@ -10,7 +13,10 @@ const DocsComponentPage = () => {
       <DocsForm
         name="Avatar"
         description="Avatar is used to display the user's profile, symbol image or icon."
-        examples={[{ title: 'Size', component: AvatarSize }]}
+        examples={[
+          { title: 'Fallback', component: AvatarFallback },
+          { title: 'Size', component: AvatarSize },
+        ]}
         apiData={[
           {
             property: 'size',
