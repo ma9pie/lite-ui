@@ -24,7 +24,7 @@ export const DOCS_LIST = [
       { key: 'flex', label: 'Flex', createdAt: '2024-05-09' },
       { key: 'grid', label: 'Grid', createdAt: '2024-05-10' },
       { key: 'divider', label: 'Divider', createdAt: '2024-05-08' },
-      { key: 'spacer', label: 'Spacer', createdAt: '' },
+      { key: 'spacer', label: 'Spacer', createdAt: '2024-05-11' },
       { key: 'switch', label: 'Switch', createdAt: '' },
       { key: 'spinner', label: 'Spinner', createdAt: '' },
       { key: 'alert', label: 'Alert', createdAt: '2024-05-02' },
