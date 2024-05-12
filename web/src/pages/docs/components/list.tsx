@@ -20,7 +20,7 @@ const DocsComponentPage = () => {
           { title: 'Tab width', component: ListTabWidth },
           { title: 'Gap', component: ListGap },
         ]}
-        apiData={[
+        propsData={[
           {
             property: 'tabWidth',
             type: ['number'],

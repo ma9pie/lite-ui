@@ -17,7 +17,7 @@ const DocsComponentPage = () => {
           { title: 'Fallback', component: AvatarFallback },
           { title: 'Size', component: AvatarSize },
         ]}
-        apiData={[
+        propsData={[
           {
             property: 'size',
             type: ['xs', 'sm', 'md', 'lg', 'xl'],

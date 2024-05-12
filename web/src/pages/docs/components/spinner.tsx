@@ -21,7 +21,7 @@ const DocsComponentPage = () => {
           { title: 'Line width', component: SpinnerLineWidth },
           { title: 'Duration', component: SpinnerDuration },
         ]}
-        apiData={[
+        propsData={[
           {
             property: 'size',
             type: ['number'],

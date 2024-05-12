@@ -25,7 +25,7 @@ const DocsComponentPage = () => {
           { title: 'Duration', component: SwitchDuration },
           { title: 'Disabled', component: SwitchDisabled },
         ]}
-        apiData={[
+        propsData={[
           {
             property: 'defaultChecked',
             type: ['boolean'],

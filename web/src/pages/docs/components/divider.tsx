@@ -9,14 +9,6 @@ import {
   DividerY,
 } from '@/components/pages/docs/exmaples/divider';
 
-export interface DividerProps {
-  y?: number;
-  size?: number;
-  color?: string;
-  dashed?: boolean;
-  strokeDasharray?: number | string;
-}
-
 const DocsComponentPage = () => {
   return (
     <DocsLayout>
@@ -29,7 +21,7 @@ const DocsComponentPage = () => {
           { title: 'Color', component: DividerColor },
           { title: 'Dashed', component: DividerDashed },
         ]}
-        apiData={[
+        propsData={[
           {
             property: 'y',
             type: ['number'],

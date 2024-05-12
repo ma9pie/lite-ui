@@ -21,7 +21,7 @@ const DocsComponentPage = () => {
           { title: 'Color', component: ChipColor },
           { title: 'Radius', component: ChipRadius },
         ]}
-        apiData={[
+        propsData={[
           {
             property: 'varient',
             type: ['filled', 'outlined'],
