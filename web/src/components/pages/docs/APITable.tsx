@@ -2,10 +2,10 @@ import { Table } from '@ma9pie/lite-ui';
 import React from 'react';
 import tw, { styled } from 'twin.macro';
 
-import { APITableRowItem } from '@/types';
+import { ComponentPropsData } from '@/types';
 
 interface Props {
-  rows: APITableRowItem[];
+  rows: ComponentPropsData[];
 }
 
 const APITable = ({ rows }: Props) => {
