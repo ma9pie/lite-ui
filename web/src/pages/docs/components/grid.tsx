@@ -19,7 +19,7 @@ const DocsComponentPage = () => {
           { title: 'RepeatCount', component: GridRepeatCount },
           { title: 'Tracks', component: GridTracks },
         ]}
-        apiData={[
+        propsData={[
           {
             property: 'repeatCount',
             type: ['number', 'string'],

@@ -13,9 +13,13 @@ export interface ExampleComponent {
   (): JSX.Element;
   code: string;
 }
-export interface APITableRowItem {
+export interface ComponentPropsData {
   property: string;
   type: string[];
   defaultValue?: any;
   description?: ReactNode;
+}
+export interface ComponentPropsType {
+  type: string;
+  code: string;
 }

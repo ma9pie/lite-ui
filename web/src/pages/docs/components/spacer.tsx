@@ -14,7 +14,7 @@ const DocsComponentPage = () => {
           { title: 'Horizontal', component: SpacerX },
           { title: 'Vertical', component: SpacerY },
         ]}
-        apiData={[
+        propsData={[
           {
             property: 'x',
             type: ['number'],

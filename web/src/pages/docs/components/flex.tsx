@@ -25,7 +25,7 @@ const DocsComponentPage = () => {
           { title: 'Justify', component: FlexJustify },
           { title: 'Items', component: FlexItems },
         ]}
-        apiData={[
+        propsData={[
           {
             property: 'flex',
             type: ['number'],

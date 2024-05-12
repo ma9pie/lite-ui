@@ -33,5 +33,5 @@ const Title = styled.p`
   ${tw`sm:text-lg`};
 `;
 const Container = styled.div`
-  ${tw`p-4 border border-solid border-neutral-200 rounded-xl`};
+  ${tw`p-4 border border-solid border-neutral-200 rounded-xl overflow-auto`};
 `;

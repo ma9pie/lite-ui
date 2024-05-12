@@ -2,21 +2,33 @@ import { Flex } from '@ma9pie/lite-ui';
 import React from 'react';
 import tw, { styled } from 'twin.macro';
 
+import CodeBlock from '@/components/common/CodeBlock';
 import { Text } from '@/components/common/text';
 import Head from '@/components/layouts/Head';
 import APITable from '@/components/pages/docs/APITable';
 import Example from '@/components/pages/docs/Example';
 import ImportSource from '@/components/pages/docs/ImportSource';
-import { APITableRowItem, ExampleListItem } from '@/types';
+import {
+  ComponentPropsData,
+  ComponentPropsType,
+  ExampleListItem,
+} from '@/types';
 
 interface Props {
   name: string;
   description: string;
   examples: ExampleListItem[];
-  apiData: APITableRowItem[];
+  propsData: ComponentPropsData[];
+  typesData?: ComponentPropsType[];
 }
 
-const DocsForm = ({ name, description, examples, apiData }: Props) => {
+const DocsForm = ({
+  name,
+  description,
+  examples,
+  propsData,
+  typesData,
+}: Props) => {
   return (
     <Wrapper>
       <Head page={name}></Head>
@@ -42,7 +54,7 @@ const DocsForm = ({ name, description, examples, apiData }: Props) => {
         <Flex col gap={16}>
           <Text>{`${name} props`}</Text>
           <TableWrapper className="scroll-x">
-            <APITable rows={apiData}></APITable>
+            <APITable rows={propsData}></APITable>
           </TableWrapper>
         </Flex>
 
@@ -73,6 +85,21 @@ const DocsForm = ({ name, description, examples, apiData }: Props) => {
           </TableWrapper>
         </Flex>
       </Section>
+
+      {typesData && (
+        <Section>
+          <Text.SubTitle>Types</Text.SubTitle>
+
+          <Flex col gap={32}>
+            {typesData.map(({ type, code }) => (
+              <Flex key={type} col gap={16}>
+                <Text>{type}</Text>
+                <CodeBlock hideCopyIcon code={code}></CodeBlock>
+              </Flex>
+            ))}
+          </Flex>
+        </Section>
+      )}
     </Wrapper>
   );
 };

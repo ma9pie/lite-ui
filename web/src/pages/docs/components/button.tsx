@@ -25,7 +25,7 @@ const DocsComponentPage = () => {
           { title: 'Disabled', component: ButtonDisabled },
           { title: 'Disable ripple', component: ButtonDisableRipple },
         ]}
-        apiData={[
+        propsData={[
           {
             property: 'full',
             type: ['boolean'],

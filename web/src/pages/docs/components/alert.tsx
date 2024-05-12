@@ -14,7 +14,7 @@ const DocsComponentPage = () => {
           { title: 'Status', component: AlertStatus },
           { title: 'Icon', component: AlertIcon },
         ]}
-        apiData={[
+        propsData={[
           {
             property: 'status',
             type: ['success', 'info', 'warn', 'error'],
