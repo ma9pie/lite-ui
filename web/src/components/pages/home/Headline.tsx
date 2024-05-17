@@ -13,6 +13,6 @@ export default Headline;
 
 const Wrapper = styled.h1`
   ${tw`font-bold my-0`};
-  ${tw`text-4xl text-center`};
+  ${tw`text-3xl text-center`};
   ${tw`sm:(text-5xl text-left)`};
 `;
