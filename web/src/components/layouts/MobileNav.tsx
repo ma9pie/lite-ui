@@ -39,10 +39,10 @@ const Wrapper = styled.div`
   ${tw``};
 `;
 const Overlay = styled.div`
-  ${tw`fixed top-0 left-0 w-screen h-screen backdrop-blur transition-[opacity] duration-200 z-20 pointer-events-none`};
+  ${tw`fixed top-0 left-0 w-screen h-full min-h-screen backdrop-blur transition-[opacity] duration-200 z-20 pointer-events-none`};
 `;
 const Content = styled.div`
-  ${tw`fixed top-0 w-60 h-screen bg-white transition-[right] duration-200 z-20 overflow-auto overscroll-none`};
+  ${tw`fixed top-0 w-60 h-full min-h-screen bg-white transition-[right] duration-200 z-20 overflow-auto overscroll-none`};
 `;
 const Top = styled.div`
   ${tw`flex justify-end p-4`};
