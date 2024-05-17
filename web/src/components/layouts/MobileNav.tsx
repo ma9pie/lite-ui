@@ -1,4 +1,3 @@
-import { Divider } from '@ma9pie/lite-ui';
 import React, { useRef } from 'react';
 import { CgClose } from 'react-icons/cg';
 import tw, { styled } from 'twin.macro';
@@ -24,8 +23,6 @@ const MobileNav = () => {
             <CgClose size={24}></CgClose>
           </IconWrapper>
         </Top>
-
-        <Divider color="var(--neutral400)"></Divider>
 
         <SideNav></SideNav>
       </Content>

@@ -76,7 +76,7 @@ const SideNav = () => {
 export default SideNav;
 
 const Wrapper = styled.div`
-  ${tw`p-4 min-h-[calc(100vh-64px)]`};
+  ${tw`min-h-[calc(100vh-64px)] px-4 pb-40`};
 `;
 const CategoryName = styled.p`
   ${tw`text-xl font-semibold`};
