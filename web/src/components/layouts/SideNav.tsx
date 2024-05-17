@@ -83,7 +83,7 @@ const CategoryName = styled.p`
 `;
 const List = styled.div<{ active: boolean }>`
   ${tw`flex items-center gap-2 text-base px-2 py-2 rounded-md transition-colors duration-200`};
-  ${tw`hover:bg-neutral-200`};
+  ${tw`sm:hover:bg-neutral-200`};
   ${({ active }) =>
     active ? tw`text-blue-500 font-medium` : tw`text-neutral-500`};
 `;
