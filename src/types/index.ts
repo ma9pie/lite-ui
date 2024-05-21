@@ -12,3 +12,4 @@ export * from './avatar';
 export * from './button';
 export * from './code';
 export * from './table';
+export * from './modal';
