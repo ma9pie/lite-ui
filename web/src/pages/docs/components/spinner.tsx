@@ -23,30 +23,35 @@ const DocsComponentPage = () => {
           { title: 'Line width', component: SpinnerLineWidth },
           { title: 'Duration', component: SpinnerDuration },
         ]}
-        propsData={[
+        apis={[
           {
-            property: 'size',
-            type: ['number'],
-            description: `Spinner's size.`,
-            defaultValue: 32,
-          },
-          {
-            property: 'color',
-            type: ['string'],
-            description: `Spinner's color.`,
-            defaultValue: '#d4d4d4',
-          },
-          {
-            property: 'lineWidth',
-            type: ['number'],
-            description: `Spinner's line thickness.`,
-            defaultValue: 3,
-          },
-          {
-            property: 'duration',
-            type: ['number'],
-            description: `Spinner's rotation time.`,
-            defaultValue: 750,
+            componentName: 'Spinner',
+            propsData: [
+              {
+                property: 'size',
+                type: ['number'],
+                description: `Spinner's size.`,
+                defaultValue: 32,
+              },
+              {
+                property: 'color',
+                type: ['string'],
+                description: `Spinner's color.`,
+                defaultValue: '#d4d4d4',
+              },
+              {
+                property: 'lineWidth',
+                type: ['number'],
+                description: `Spinner's line thickness.`,
+                defaultValue: 3,
+              },
+              {
+                property: 'duration',
+                type: ['number'],
+                description: `Spinner's rotation time.`,
+                defaultValue: 750,
+              },
+            ],
           },
         ]}
       ></DocsForm>

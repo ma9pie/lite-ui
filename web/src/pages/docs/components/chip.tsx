@@ -23,30 +23,35 @@ const DocsComponentPage = () => {
           { title: 'Color', component: ChipColor },
           { title: 'Radius', component: ChipRadius },
         ]}
-        propsData={[
+        apis={[
           {
-            property: 'varient',
-            type: ['filled', 'outlined'],
-            description: 'The chip appearance style.',
-            defaultValue: 'filled',
-          },
-          {
-            property: 'size',
-            type: ['sm', 'md', 'lg'],
-            description: 'The size of the chip.',
-            defaultValue: 'md',
-          },
-          {
-            property: 'color',
-            type: ['string'],
-            description: 'The color of the chip.',
-            defaultValue: '#a3a3a3',
-          },
-          {
-            property: 'radius',
-            type: ['number'],
-            description: 'The radius of the chip.',
-            defaultValue: 9999,
+            componentName: 'Chip',
+            propsData: [
+              {
+                property: 'varient',
+                type: ['filled', 'outlined'],
+                description: 'The chip appearance style.',
+                defaultValue: 'filled',
+              },
+              {
+                property: 'size',
+                type: ['sm', 'md', 'lg'],
+                description: 'The size of the chip.',
+                defaultValue: 'md',
+              },
+              {
+                property: 'color',
+                type: ['string'],
+                description: 'The color of the chip.',
+                defaultValue: '#a3a3a3',
+              },
+              {
+                property: 'radius',
+                type: ['number'],
+                description: 'The radius of the chip.',
+                defaultValue: 9999,
+              },
+            ],
           },
         ]}
       ></DocsForm>

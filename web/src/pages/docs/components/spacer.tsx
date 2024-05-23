@@ -16,18 +16,23 @@ const DocsComponentPage = () => {
           { title: 'Horizontal', component: SpacerX },
           { title: 'Vertical', component: SpacerY },
         ]}
-        propsData={[
+        apis={[
           {
-            property: 'x',
-            type: ['number'],
-            description: 'x-axis spacing.',
-            defaultValue: 1,
-          },
-          {
-            property: 'y',
-            type: ['number'],
-            description: 'y-axis spacing.',
-            defaultValue: 1,
+            componentName: 'Spacer',
+            propsData: [
+              {
+                property: 'x',
+                type: ['number'],
+                description: 'x-axis spacing.',
+                defaultValue: 1,
+              },
+              {
+                property: 'y',
+                type: ['number'],
+                description: 'y-axis spacing.',
+                defaultValue: 1,
+              },
+            ],
           },
         ]}
       ></DocsForm>

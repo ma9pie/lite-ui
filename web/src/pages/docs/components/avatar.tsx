@@ -19,24 +19,29 @@ const DocsComponentPage = () => {
           { title: 'Fallback', component: AvatarFallback },
           { title: 'Size', component: AvatarSize },
         ]}
-        propsData={[
+        apis={[
           {
-            property: 'size',
-            type: ['xs', 'sm', 'md', 'lg', 'xl'],
-            description: 'Size of Avatar.',
-            defaultValue: 'md',
-          },
-          {
-            property: 'src',
-            type: ['string'],
-            description: 'Image source.',
-            defaultValue: undefined,
-          },
-          {
-            property: 'alt',
-            type: ['string'],
-            description: 'Image alternate.',
-            defaultValue: '',
+            componentName: 'Avatar',
+            propsData: [
+              {
+                property: 'size',
+                type: ['xs', 'sm', 'md', 'lg', 'xl'],
+                description: 'Size of Avatar.',
+                defaultValue: 'md',
+              },
+              {
+                property: 'src',
+                type: ['string'],
+                description: 'Image source.',
+                defaultValue: undefined,
+              },
+              {
+                property: 'alt',
+                type: ['string'],
+                description: 'Image alternate.',
+                defaultValue: '',
+              },
+            ],
           },
         ]}
       ></DocsForm>

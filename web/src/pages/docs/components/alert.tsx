@@ -16,30 +16,35 @@ const DocsComponentPage = () => {
           { title: 'Status', component: AlertStatus },
           { title: 'Icon', component: AlertIcon },
         ]}
-        propsData={[
+        apis={[
           {
-            property: 'status',
-            type: ['success', 'info', 'warn', 'error'],
-            description: 'Type of Alert styles.',
-            defaultValue: 'success',
-          },
-          {
-            property: 'iconSize',
-            type: ['number'],
-            description: 'Size of icon.',
-            defaultValue: 20,
-          },
-          {
-            property: 'hideIcon',
-            type: ['boolean'],
-            description: 'Hide icon.',
-            defaultValue: false,
-          },
-          {
-            property: 'children',
-            type: ['ReactNode'],
-            description: 'Alert content.',
-            defaultValue: undefined,
+            componentName: 'Alert',
+            propsData: [
+              {
+                property: 'status',
+                type: ['success', 'info', 'warn', 'error'],
+                description: 'Type of Alert styles.',
+                defaultValue: 'success',
+              },
+              {
+                property: 'iconSize',
+                type: ['number'],
+                description: 'Size of icon.',
+                defaultValue: 20,
+              },
+              {
+                property: 'hideIcon',
+                type: ['boolean'],
+                description: 'Hide icon.',
+                defaultValue: false,
+              },
+              {
+                property: 'children',
+                type: ['ReactNode'],
+                description: 'Alert content.',
+                defaultValue: undefined,
+              },
+            ],
           },
         ]}
       ></DocsForm>

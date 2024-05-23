@@ -27,48 +27,53 @@ const DocsComponentPage = () => {
           { title: 'Duration', component: SwitchDuration },
           { title: 'Disabled', component: SwitchDisabled },
         ]}
-        propsData={[
+        apis={[
           {
-            property: 'defaultChecked',
-            type: ['boolean'],
-            description: 'Initial state.',
-            defaultValue: false,
-          },
-          {
-            property: 'size',
-            type: ['number'],
-            description: `Switch's height.`,
-            defaultValue: 32,
-          },
-          {
-            property: 'trackPadding',
-            type: ['number'],
-            description: `Switch's track padding size.`,
-            defaultValue: 4,
-          },
-          {
-            property: 'trackColor',
-            type: ['string'],
-            description: `Switch's track background color.`,
-            defaultValue: '#525252',
-          },
-          {
-            property: 'duration',
-            type: ['number'],
-            description: `Animation duration.`,
-            defaultValue: 150,
-          },
-          {
-            property: 'disabled',
-            type: ['boolean'],
-            description: 'Disabled switch.',
-            defaultValue: false,
-          },
-          {
-            property: 'onChange',
-            type: ['(value: boolean) => void'],
-            description: 'onChange event.',
-            defaultValue: undefined,
+            componentName: 'Switch',
+            propsData: [
+              {
+                property: 'defaultChecked',
+                type: ['boolean'],
+                description: 'Initial state.',
+                defaultValue: false,
+              },
+              {
+                property: 'size',
+                type: ['number'],
+                description: `Switch's height.`,
+                defaultValue: 32,
+              },
+              {
+                property: 'trackPadding',
+                type: ['number'],
+                description: `Switch's track padding size.`,
+                defaultValue: 4,
+              },
+              {
+                property: 'trackColor',
+                type: ['string'],
+                description: `Switch's track background color.`,
+                defaultValue: '#525252',
+              },
+              {
+                property: 'duration',
+                type: ['number'],
+                description: `Animation duration.`,
+                defaultValue: 150,
+              },
+              {
+                property: 'disabled',
+                type: ['boolean'],
+                description: 'Disabled switch.',
+                defaultValue: false,
+              },
+              {
+                property: 'onChange',
+                type: ['(value: boolean) => void'],
+                description: 'onChange event.',
+                defaultValue: undefined,
+              },
+            ],
           },
         ]}
       ></DocsForm>

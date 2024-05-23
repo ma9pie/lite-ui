@@ -8,11 +8,7 @@ import Head from '@/components/layouts/Head';
 import APITable from '@/components/pages/docs/APITable';
 import Example from '@/components/pages/docs/Example';
 import ImportSource from '@/components/pages/docs/ImportSource';
-import {
-  ComponentPropsData,
-  ComponentPropsType,
-  ExampleListItem,
-} from '@/types';
+import { ComponentAPI, ComponentPropsType, ExampleListItem } from '@/types';
 
 interface Props {
   name: string;
@@ -20,7 +16,7 @@ interface Props {
   imports: string[];
   src: String;
   examples: ExampleListItem[];
-  propsData: ComponentPropsData[];
+  apis: ComponentAPI[];
   typesData?: ComponentPropsType[];
 }
 
@@ -30,7 +26,7 @@ const DocsForm = ({
   imports,
   src,
   examples,
-  propsData,
+  apis,
   typesData,
 }: Props) => {
   return (
@@ -55,12 +51,14 @@ const DocsForm = ({
       <Section>
         <Text.SubTitle>API</Text.SubTitle>
 
-        <Flex col gap={16}>
-          <Text>{`${name} props`}</Text>
-          <TableWrapper className="scroll-x">
-            <APITable rows={propsData}></APITable>
-          </TableWrapper>
-        </Flex>
+        {apis.map(({ componentName, propsData }) => (
+          <Flex col gap={16} key={componentName}>
+            <Text>{`${componentName} props`}</Text>
+            <TableWrapper className="scroll-x">
+              <APITable rows={propsData}></APITable>
+            </TableWrapper>
+          </Flex>
+        ))}
 
         <Flex col gap={16}>
           <Text>Default props</Text>

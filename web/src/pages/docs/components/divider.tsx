@@ -23,36 +23,41 @@ const DocsComponentPage = () => {
           { title: 'Color', component: DividerColor },
           { title: 'Dashed', component: DividerDashed },
         ]}
-        propsData={[
+        apis={[
           {
-            property: 'y',
-            type: ['number'],
-            description: 'Margin value in y-axis direction.',
-            defaultValue: 0,
-          },
-          {
-            property: 'size',
-            type: ['number'],
-            description: 'Thickness of line.',
-            defaultValue: 1,
-          },
-          {
-            property: 'color',
-            type: ['string'],
-            description: 'Color of line.',
-            defaultValue: 'black',
-          },
-          {
-            property: 'dashed',
-            type: ['boolean'],
-            description: 'Dashed style line.',
-            defaultValue: false,
-          },
-          {
-            property: 'strokeDasharray',
-            type: ['number', 'string'],
-            description: 'Dashed spacing of line.',
-            defaultValue: 2,
+            componentName: 'Divider',
+            propsData: [
+              {
+                property: 'y',
+                type: ['number'],
+                description: 'Margin value in y-axis direction.',
+                defaultValue: 0,
+              },
+              {
+                property: 'size',
+                type: ['number'],
+                description: 'Thickness of line.',
+                defaultValue: 1,
+              },
+              {
+                property: 'color',
+                type: ['string'],
+                description: 'Color of line.',
+                defaultValue: 'black',
+              },
+              {
+                property: 'dashed',
+                type: ['boolean'],
+                description: 'Dashed style line.',
+                defaultValue: false,
+              },
+              {
+                property: 'strokeDasharray',
+                type: ['number', 'string'],
+                description: 'Dashed spacing of line.',
+                defaultValue: 2,
+              },
+            ],
           },
         ]}
       ></DocsForm>

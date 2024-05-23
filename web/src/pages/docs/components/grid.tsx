@@ -21,24 +21,29 @@ const DocsComponentPage = () => {
           { title: 'RepeatCount', component: GridRepeatCount },
           { title: 'Tracks', component: GridTracks },
         ]}
-        propsData={[
+        apis={[
           {
-            property: 'repeatCount',
-            type: ['number', 'string'],
-            description: 'Repeat count in grid-template-columns property.',
-            defaultValue: 1,
-          },
-          {
-            property: 'tracks',
-            type: ['string'],
-            description: 'Repeat count in grid-template-columns property.',
-            defaultValue: '1fr',
-          },
-          {
-            property: 'gap',
-            type: ['number', 'string'],
-            description: 'Spacing between elements.',
-            defaultValue: undefined,
+            componentName: 'Grid',
+            propsData: [
+              {
+                property: 'repeatCount',
+                type: ['number', 'string'],
+                description: 'Repeat count in grid-template-columns property.',
+                defaultValue: 1,
+              },
+              {
+                property: 'tracks',
+                type: ['string'],
+                description: 'Repeat count in grid-template-columns property.',
+                defaultValue: '1fr',
+              },
+              {
+                property: 'gap',
+                type: ['number', 'string'],
+                description: 'Spacing between elements.',
+                defaultValue: undefined,
+              },
+            ],
           },
         ]}
       ></DocsForm>
