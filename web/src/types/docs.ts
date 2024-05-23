@@ -13,6 +13,10 @@ export interface ExampleComponent {
   (): JSX.Element;
   code: string;
 }
+export interface ComponentAPI {
+  componentName: string;
+  propsData: ComponentPropsData[];
+}
 export interface ComponentPropsData {
   property: string;
   type: string[];

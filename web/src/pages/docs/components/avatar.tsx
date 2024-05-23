@@ -13,28 +13,35 @@ const DocsComponentPage = () => {
       <DocsForm
         name="Avatar"
         description="Avatar is used to display the user's profile, symbol image or icon."
+        imports={['Avatar']}
+        src="Avatar.tsx"
         examples={[
           { title: 'Fallback', component: AvatarFallback },
           { title: 'Size', component: AvatarSize },
         ]}
-        propsData={[
+        apis={[
           {
-            property: 'size',
-            type: ['xs', 'sm', 'md', 'lg', 'xl'],
-            description: 'Size of Avatar.',
-            defaultValue: 'md',
-          },
-          {
-            property: 'src',
-            type: ['string'],
-            description: 'Image source.',
-            defaultValue: undefined,
-          },
-          {
-            property: 'alt',
-            type: ['string'],
-            description: 'Image alternate.',
-            defaultValue: '',
+            componentName: 'Avatar',
+            propsData: [
+              {
+                property: 'size',
+                type: ['xs', 'sm', 'md', 'lg', 'xl'],
+                description: 'Size of Avatar.',
+                defaultValue: 'md',
+              },
+              {
+                property: 'src',
+                type: ['string'],
+                description: 'Image source.',
+                defaultValue: undefined,
+              },
+              {
+                property: 'alt',
+                type: ['string'],
+                description: 'Image alternate.',
+                defaultValue: '',
+              },
+            ],
           },
         ]}
       ></DocsForm>

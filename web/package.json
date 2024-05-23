@@ -10,7 +10,7 @@
     "latest": "npm cache verify && npm i @ma9pie/lite-ui@latest"
   },
   "dependencies": {
-    "@ma9pie/lite-ui": "^0.0.39",
+    "@ma9pie/lite-ui": "^0.0.43",
     "@tanstack/react-query": "^5.32.0",
     "axios": "^1.6.8",
     "jotai": "^2.8.0",

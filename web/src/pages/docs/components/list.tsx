@@ -15,29 +15,36 @@ const DocsComponentPage = () => {
       <DocsForm
         name="List"
         description="Used to represent user's profile, symbol image or icon."
+        imports={['List']}
+        src="List.tsx"
         examples={[
           { title: undefined, component: ListGeneral },
           { title: 'Tab width', component: ListTabWidth },
           { title: 'Gap', component: ListGap },
         ]}
-        propsData={[
+        apis={[
           {
-            property: 'tabWidth',
-            type: ['number'],
-            description: 'Tab size.',
-            defaultValue: undefined,
-          },
-          {
-            property: 'gap',
-            type: ['number'],
-            description: 'Spacing between list item.',
-            defaultValue: undefined,
-          },
-          {
-            property: 'children',
-            type: ['ReactNode'],
-            description: 'List content.',
-            defaultValue: undefined,
+            componentName: 'List',
+            propsData: [
+              {
+                property: 'tabWidth',
+                type: ['number'],
+                description: 'Tab size.',
+                defaultValue: undefined,
+              },
+              {
+                property: 'gap',
+                type: ['number'],
+                description: 'Spacing between list item.',
+                defaultValue: undefined,
+              },
+              {
+                property: 'children',
+                type: ['ReactNode'],
+                description: 'List content.',
+                defaultValue: undefined,
+              },
+            ],
           },
         ]}
       ></DocsForm>

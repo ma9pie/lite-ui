@@ -22,25 +22,32 @@ const DocsComponentPage = () => {
       <DocsForm
         name="Table"
         description="A table is used to display rows of data."
+        imports={['Table']}
+        src="Table.tsx"
         examples={[{ title: undefined, component: TableGeneral }]}
-        propsData={[
+        apis={[
           {
-            property: 'minWidth',
-            type: ['number', 'string'],
-            description: `Table's min width.`,
-            defaultValue: undefined,
-          },
-          {
-            property: 'field',
-            type: ['TableField[]'],
-            description: 'Table field data.',
-            defaultValue: undefined,
-          },
-          {
-            property: 'rows',
-            type: ['TableRow[]'],
-            description: 'Table row data.',
-            defaultValue: undefined,
+            componentName: 'Table',
+            propsData: [
+              {
+                property: 'minWidth',
+                type: ['number', 'string'],
+                description: `Table's min width.`,
+                defaultValue: undefined,
+              },
+              {
+                property: 'field',
+                type: ['TableField[]'],
+                description: 'Table field data.',
+                defaultValue: undefined,
+              },
+              {
+                property: 'rows',
+                type: ['TableRow[]'],
+                description: 'Table row data.',
+                defaultValue: undefined,
+              },
+            ],
           },
         ]}
         typesData={[

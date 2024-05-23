@@ -5,27 +5,28 @@ import { FaGithub } from 'react-icons/fa';
 import tw, { styled } from 'twin.macro';
 
 interface Props {
-  name: string;
+  imports: string[];
+  src: String;
 }
 
-const ImportSource = ({ name }: Props) => {
+const ImportSource = ({ imports, src }: Props) => {
   return (
     <Wrapper>
       <Container>
         <FieldText>Import</FieldText>
         <ImportCode
-          code={`import { ${name} } from '@ma9pie/lite-ui';`}
+          code={`import { ${imports.join(', ')} } from '@ma9pie/lite-ui';`}
         ></ImportCode>
       </Container>
 
       <Container>
         <FieldText>Source</FieldText>
         <LinkText
-          href={`https://github.com/ma9pie/lite-ui/blob/main/src/components/${name}.tsx`}
+          href={`https://github.com/ma9pie/lite-ui/blob/main/src/components/${src}`}
           target="_blank"
         >
           <FaGithub size={20}></FaGithub>
-          {`components/${name}.tsx`}
+          {`components/${src}`}
         </LinkText>
       </Container>
     </Wrapper>

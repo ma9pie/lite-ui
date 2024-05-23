@@ -49,5 +49,5 @@ const APITable = ({ rows }: Props) => {
 export default APITable;
 
 const Item = styled.div`
-  ${tw`py-1`};
+  ${tw`sm:py-1`};
 `;

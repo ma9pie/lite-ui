@@ -26,6 +26,9 @@ export default App;`;
 const Component = (props: CodeProps) => {
   return (
     <Container>
+      <Code
+        code={`import { Button, Switch, Modal, Table } from '@ma9pie/lite-ui';`}
+      ></Code>
       <Code {...props}></Code>
       <Code code={CODE}></Code>
     </Container>
