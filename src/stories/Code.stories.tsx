@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import type { Meta } from '@storybook/react';
 import React from 'react';
 
@@ -12,14 +13,31 @@ const meta = {
 
 export default meta;
 
+const CODE = `import React from 'react'
+
+const App = () => {
+  return (
+    <div>App</div>
+  )
+}
+
+export default App;`;
+
 const Component = (props: CodeProps) => {
   return (
-    <>
+    <Container>
       <Code {...props}></Code>
-    </>
+      <Code code={CODE}></Code>
+    </Container>
   );
 };
 
 export const Code_ = {
   render: Component,
 };
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
