@@ -86,6 +86,7 @@ const Container = styled.div<{ gap: string }>`
 `;
 const CodeBox = styled.pre`
   line-height: 20px;
+  white-space: pre-wrap;
 `;
 const IconWrapper = styled.div<{ hidden: boolean; isCopied: boolean }>`
   transition: color 0.2s ease;
