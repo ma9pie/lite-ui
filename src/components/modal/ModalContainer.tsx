@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import useModalContext from '@/components/modal/useModalContext';
 import { IsOpen, ModalContentProps } from '@/types';
 
-const ModalContent = ({
+const ModalContainer = ({
   overlay,
   content,
   children,
@@ -29,14 +29,16 @@ const ModalContent = ({
   );
 };
 
-export default ModalContent;
+export default ModalContainer;
 
 const Wrapper = styled.div<{ isOpen: IsOpen; duration: number }>`
+  position: relative;
   flex-direction: column;
   animation-name: ${({ isOpen }) => (isOpen ? 'fade-in' : 'fade-out')};
   animation-duration: ${({ duration }) => `${duration}ms`};
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  z-index: 1000;
 
   @keyframes fade-in {
     from {
@@ -62,7 +64,6 @@ const Overlay = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1000;
 `;
 const Content = styled.div<{ isOpen: IsOpen; duration: number }>`
   position: fixed;
@@ -77,7 +78,6 @@ const Content = styled.div<{ isOpen: IsOpen; duration: number }>`
   border-radius: 8px;
   background-color: white;
   overflow: auto;
-  z-index: 1000;
   animation-name: ${({ isOpen }) => (isOpen ? 'scale-up' : 'scale-down')};
   animation-duration: ${({ duration }) => `${duration}ms`};
   animation-timing-function: ease-in-out;

@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 
-import ModalContent from '@/components/modal/ModalContent';
+import ModalContainer from '@/components/modal/ModalContainer';
 import { ModalContext } from '@/components/modal/useModalContext';
 import { ModalProps } from '@/types';
 import { delay } from '@/utils';
@@ -26,7 +26,7 @@ const Modal = ({ duration = 200, isOpen, setIsOpen, ...props }: ModalProps) => {
 
   return (
     <ModalContext.Provider value={{ isOpen, duration, onClose: handleClose }}>
-      <ModalContent {...props}></ModalContent>
+      <ModalContainer {...props}></ModalContainer>
     </ModalContext.Provider>
   );
 };
