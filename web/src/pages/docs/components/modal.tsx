@@ -57,7 +57,7 @@ const DocsComponentPage = () => {
               },
               {
                 property: 'setIsOpen',
-                type: ['Dispatch<SetStateAction<IsOpen>>'],
+                type: ['SetStateAction<IsOpen>'],
                 description: 'Modal isOpen setState.',
               },
               {
