@@ -17,6 +17,8 @@ import {
 interface Props {
   name: string;
   description: string;
+  imports: string[];
+  src: String;
   examples: ExampleListItem[];
   propsData: ComponentPropsData[];
   typesData?: ComponentPropsType[];
@@ -25,6 +27,8 @@ interface Props {
 const DocsForm = ({
   name,
   description,
+  imports,
+  src,
   examples,
   propsData,
   typesData,
@@ -36,7 +40,7 @@ const DocsForm = ({
       <Section>
         <Text.Title>{name}</Text.Title>
         <Text>{description}</Text>
-        <ImportSource name={name}></ImportSource>
+        <ImportSource imports={imports} src={src}></ImportSource>
       </Section>
 
       <Section>

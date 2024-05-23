@@ -14,6 +14,8 @@ const DocsComponentPage = () => {
       <DocsForm
         name="Grid"
         description="Grid is used to align elements by specifying the column count."
+        imports={['Grid']}
+        src="Grid"
         examples={[
           { title: 'Auto fill', component: GridAutoFill },
           { title: 'RepeatCount', component: GridRepeatCount },

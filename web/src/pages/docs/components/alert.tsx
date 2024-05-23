@@ -10,6 +10,8 @@ const DocsComponentPage = () => {
       <DocsForm
         name="Alert"
         description="Alert is used to display messages that require attention."
+        imports={['Alert']}
+        src="Alert"
         examples={[
           { title: 'Status', component: AlertStatus },
           { title: 'Icon', component: AlertIcon },

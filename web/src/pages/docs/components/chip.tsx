@@ -15,6 +15,8 @@ const DocsComponentPage = () => {
       <DocsForm
         name="Chip"
         description="Chips are used as labels or badges."
+        imports={['Chip']}
+        src="Chip"
         examples={[
           { title: 'Varient', component: ChipVarient },
           { title: 'Size', component: ChipSize },

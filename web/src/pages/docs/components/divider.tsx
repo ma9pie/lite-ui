@@ -15,6 +15,8 @@ const DocsComponentPage = () => {
       <DocsForm
         name="Divider"
         description="Divider is used as a line to separate sections within a page."
+        imports={['Divider']}
+        src="Divider"
         examples={[
           { title: 'Margin y', component: DividerY },
           { title: 'Size', component: DividerSize },

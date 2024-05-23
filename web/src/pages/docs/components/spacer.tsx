@@ -10,6 +10,8 @@ const DocsComponentPage = () => {
       <DocsForm
         name="Spacer"
         description="Spacer is used to create spacing between components."
+        imports={['Spacer']}
+        src="Spacer"
         examples={[
           { title: 'Horizontal', component: SpacerX },
           { title: 'Vertical', component: SpacerY },

@@ -15,6 +15,8 @@ const DocsComponentPage = () => {
       <DocsForm
         name="List"
         description="Used to represent user's profile, symbol image or icon."
+        imports={['List']}
+        src="List"
         examples={[
           { title: undefined, component: ListGeneral },
           { title: 'Tab width', component: ListTabWidth },

@@ -17,6 +17,8 @@ const DocsComponentPage = () => {
       <DocsForm
         name="Flex"
         description="Flex is used to align elements."
+        imports={['Flex']}
+        src="Flex"
         examples={[
           { title: 'Flex', component: FlexFlex },
           { title: 'Wrap', component: FlexWrap },

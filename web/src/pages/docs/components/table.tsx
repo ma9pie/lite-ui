@@ -22,6 +22,8 @@ const DocsComponentPage = () => {
       <DocsForm
         name="Table"
         description="A table is used to display rows of data."
+        imports={['Table']}
+        src="Table"
         examples={[{ title: undefined, component: TableGeneral }]}
         propsData={[
           {
