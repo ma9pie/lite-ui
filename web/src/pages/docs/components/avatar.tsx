@@ -14,7 +14,7 @@ const DocsComponentPage = () => {
         name="Avatar"
         description="Avatar is used to display the user's profile, symbol image or icon."
         imports={['Avatar']}
-        src="Avatar"
+        src="Avatar.tsx"
         examples={[
           { title: 'Fallback', component: AvatarFallback },
           { title: 'Size', component: AvatarSize },

@@ -23,7 +23,7 @@ const DocsComponentPage = () => {
         name="Table"
         description="A table is used to display rows of data."
         imports={['Table']}
-        src="Table"
+        src="Table.tsx"
         examples={[{ title: undefined, component: TableGeneral }]}
         propsData={[
           {

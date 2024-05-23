@@ -18,7 +18,7 @@ const DocsComponentPage = () => {
         name="Switch"
         description="Switch is used to users to toggle between two states."
         imports={['Switch']}
-        src="Switch"
+        src="Switch.tsx"
         examples={[
           { title: undefined, component: SwitchGeneral },
           { title: 'Size', component: SwitchSize },

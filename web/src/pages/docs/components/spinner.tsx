@@ -16,7 +16,7 @@ const DocsComponentPage = () => {
         name="Spinner"
         description="Spinner is used to indicate loading status."
         imports={['Spinner']}
-        src="Spinner"
+        src="Spinner.tsx"
         examples={[
           { title: 'Size', component: SpinnerSize },
           { title: 'Color', component: SpinnerColor },

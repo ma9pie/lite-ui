@@ -18,7 +18,7 @@ const DocsComponentPage = () => {
         name="Flex"
         description="Flex is used to align elements."
         imports={['Flex']}
-        src="Flex"
+        src="Flex.tsx"
         examples={[
           { title: 'Flex', component: FlexFlex },
           { title: 'Wrap', component: FlexWrap },

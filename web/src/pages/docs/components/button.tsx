@@ -18,7 +18,7 @@ const DocsComponentPage = () => {
         name="Button"
         description="Button is used to trigger an action or perform an operation when clicked."
         imports={['Button']}
-        src="Button"
+        src="Button.tsx"
         examples={[
           { title: 'Full', component: ButtonFull },
           { title: 'Size', component: ButtonSize },

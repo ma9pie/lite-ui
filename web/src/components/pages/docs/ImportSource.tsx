@@ -22,11 +22,11 @@ const ImportSource = ({ imports, src }: Props) => {
       <Container>
         <FieldText>Source</FieldText>
         <LinkText
-          href={`https://github.com/ma9pie/lite-ui/blob/main/src/components/${src}.tsx`}
+          href={`https://github.com/ma9pie/lite-ui/blob/main/src/components/${src}`}
           target="_blank"
         >
           <FaGithub size={20}></FaGithub>
-          {`components/${src}.tsx`}
+          {`components/${src}`}
         </LinkText>
       </Container>
     </Wrapper>

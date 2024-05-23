@@ -16,7 +16,7 @@ const DocsComponentPage = () => {
         name="Chip"
         description="Chips are used as labels or badges."
         imports={['Chip']}
-        src="Chip"
+        src="Chip.tsx"
         examples={[
           { title: 'Varient', component: ChipVarient },
           { title: 'Size', component: ChipSize },

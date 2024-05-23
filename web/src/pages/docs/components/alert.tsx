@@ -11,7 +11,7 @@ const DocsComponentPage = () => {
         name="Alert"
         description="Alert is used to display messages that require attention."
         imports={['Alert']}
-        src="Alert"
+        src="Alert.tsx"
         examples={[
           { title: 'Status', component: AlertStatus },
           { title: 'Icon', component: AlertIcon },

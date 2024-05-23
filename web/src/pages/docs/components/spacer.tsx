@@ -11,7 +11,7 @@ const DocsComponentPage = () => {
         name="Spacer"
         description="Spacer is used to create spacing between components."
         imports={['Spacer']}
-        src="Spacer"
+        src="Spacer.tsx"
         examples={[
           { title: 'Horizontal', component: SpacerX },
           { title: 'Vertical', component: SpacerY },

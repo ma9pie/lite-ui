@@ -15,7 +15,7 @@ const DocsComponentPage = () => {
         name="Grid"
         description="Grid is used to align elements by specifying the column count."
         imports={['Grid']}
-        src="Grid"
+        src="Grid.tsx"
         examples={[
           { title: 'Auto fill', component: GridAutoFill },
           { title: 'RepeatCount', component: GridRepeatCount },

@@ -16,7 +16,7 @@ const DocsComponentPage = () => {
         name="Divider"
         description="Divider is used as a line to separate sections within a page."
         imports={['Divider']}
-        src="Divider"
+        src="Divider.tsx"
         examples={[
           { title: 'Margin y', component: DividerY },
           { title: 'Size', component: DividerSize },
