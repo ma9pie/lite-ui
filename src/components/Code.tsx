@@ -48,7 +48,9 @@ const Code = ({
   return (
     <Wrapper fontSize={fontSize} padding={padding} full={full} {...props}>
       <Container gap={gap}>
-        <CodeText>{code}</CodeText>
+        <CodeBox>
+          <code>{code}</code>
+        </CodeBox>
         <CopyToClipboard text={code} onCopy={handleCopy}>
           <IconWrapper hidden={hideIcon} isCopied={isCopied}>
             {isCopied ? (
@@ -73,7 +75,6 @@ const Wrapper = styled.div<{
   position: relative;
   border-radius: 8px;
   background-color: var(--neutral200);
-
   font-size: ${({ fontSize }) => fontSize};
   padding: ${({ padding }) => padding};
   width: ${({ full }) => (full ? '100%' : 'fit-content')};
@@ -81,11 +82,9 @@ const Wrapper = styled.div<{
 const Container = styled.div<{ gap: string }>`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
   gap: ${({ gap }) => gap};
 `;
-const CodeText = styled.p`
+const CodeBox = styled.pre`
   line-height: 20px;
 `;
 const IconWrapper = styled.div<{ hidden: boolean; isCopied: boolean }>`
