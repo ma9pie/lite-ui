@@ -16,8 +16,6 @@ const IS_OPEN_TYPE = `export type IsOpen = boolean | undefined;`;
 const DocsComponentPage = () => {
   return (
     <DocsLayout>
-      <ModalGeneral></ModalGeneral>
-      <ModalCustom></ModalCustom>
       <DocsForm
         name="Modal"
         description="Modal is used to display a dialog box that provides custom content."
