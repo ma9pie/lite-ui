@@ -12,30 +12,30 @@ const APITable = ({ rows }: Props) => {
   return (
     <Table
       className="text-sm"
-      minWidth={600}
+      minWidth={800}
       field={[
         {
           key: 'property',
           value: 'Property',
-          flex: 2,
+          flex: 1,
           render: ({ property }) => <Item>{property}</Item>,
         },
         {
           key: 'type',
           value: 'Type',
-          flex: 3,
+          flex: 2,
           render: ({ type }) => <Item>{type.join(' | ')}</Item>,
         },
         {
           key: 'description',
           value: 'Description',
-          flex: 3,
+          flex: 2,
           render: ({ description }) => <Item>{description}</Item>,
         },
         {
           key: 'defaultValue',
           value: 'Default',
-          flex: 2,
+          flex: 1,
           render: ({ defaultValue }) => (
             <Item>{JSON.stringify(defaultValue) || '-'}</Item>
           ),
