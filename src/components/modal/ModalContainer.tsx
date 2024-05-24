@@ -21,9 +21,9 @@ const ModalContainer = ({
   }, []);
 
   return (
-    <Wrapper isOpen={isOpen} duration={duration}>
-      <Overlay onClick={onClose} zIndex={zIndex} {...overlay}></Overlay>
-      <Content isOpen={isOpen} duration={duration} zIndex={zIndex} {...content}>
+    <Wrapper isOpen={isOpen} duration={duration} zIndex={zIndex}>
+      <Overlay onClick={onClose} {...overlay}></Overlay>
+      <Content isOpen={isOpen} duration={duration} {...content}>
         {children}
       </Content>
     </Wrapper>
@@ -35,12 +35,15 @@ export default ModalContainer;
 const Wrapper = styled.div<{
   isOpen: IsOpen;
   duration: number;
+  zIndex: number;
 }>`
+  position: fixed;
   flex-direction: column;
   animation-name: ${({ isOpen }) => (isOpen ? 'fade-in' : 'fade-out')};
   animation-duration: ${({ duration }) => `${duration}ms`};
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  z-index: ${({ zIndex }) => zIndex};
 
   @keyframes fade-in {
     from {
@@ -59,19 +62,17 @@ const Wrapper = styled.div<{
     }
   }
 `;
-const Overlay = styled.div<{ zIndex: number }>`
+const Overlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: ${({ zIndex }) => zIndex};
 `;
 const Content = styled.div<{
   isOpen: IsOpen;
   duration: number;
-  zIndex: number;
 }>`
   position: fixed;
   top: 50%;
@@ -85,7 +86,6 @@ const Content = styled.div<{
   border-radius: 8px;
   background-color: white;
   overflow: auto;
-  z-index: ${({ zIndex }) => zIndex};
   animation-name: ${({ isOpen }) => (isOpen ? 'scale-up' : 'scale-down')};
   animation-duration: ${({ duration }) => `${duration}ms`};
   animation-timing-function: ease-in-out;
