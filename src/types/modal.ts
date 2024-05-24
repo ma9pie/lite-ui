@@ -11,6 +11,7 @@ export interface ModalProps extends ModalContentProps {
 export interface ModalContentProps {
   overlay?: StyleProps;
   content?: StyleProps;
+  zIndex?: number;
   children?: ReactNode;
   onChangeOpen?: (value: boolean) => void;
 }
