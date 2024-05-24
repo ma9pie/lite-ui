@@ -64,6 +64,7 @@ const Overlay = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: inherit;
 `;
 const Content = styled.div<{ isOpen: IsOpen; duration: number }>`
   position: fixed;
@@ -78,6 +79,7 @@ const Content = styled.div<{ isOpen: IsOpen; duration: number }>`
   border-radius: 8px;
   background-color: white;
   overflow: auto;
+  z-index: inherit;
   animation-name: ${({ isOpen }) => (isOpen ? 'scale-up' : 'scale-down')};
   animation-duration: ${({ duration }) => `${duration}ms`};
   animation-timing-function: ease-in-out;
