@@ -42,9 +42,11 @@ const Header = () => {
               <Link href="/">
                 <Title>Lite UI</Title>
               </Link>
-              {liteuiVersion && (
-                <VersionChip size="sm">{liteuiVersion}</VersionChip>
-              )}
+              <VersionChipWrapper>
+                {liteuiVersion && (
+                  <VersionChip size="sm">{liteuiVersion}</VersionChip>
+                )}
+              </VersionChipWrapper>
             </Flex>
 
             <MenuContainer>
@@ -86,6 +88,9 @@ const Wrapper = styled.div`
 `;
 const Title = styled.p`
   ${tw`text-3xl font-semibold whitespace-nowrap`};
+`;
+const VersionChipWrapper = styled.div`
+  ${tw`min-w-14`};
 `;
 const VersionChip = styled(Chip)`
   ${tw`text-xs font-medium bg-neutral-200`};
