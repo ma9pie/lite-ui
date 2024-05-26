@@ -51,7 +51,7 @@ const DocsComponentPage = () => {
               },
               {
                 property: 'color',
-                type: ['default', 'primary'],
+                type: ['default', 'primary', 'string'],
                 description: `Button's color.`,
                 defaultValue: 'default',
               },

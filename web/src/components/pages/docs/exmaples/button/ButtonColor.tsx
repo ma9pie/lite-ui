@@ -6,6 +6,9 @@ const App = () => {
     <div className="flex gap-4 flex-wrap">
       <Button color="default">Default</Button>
       <Button color="primary">Primary</Button>
+      <Button color="#ef4444">red</Button>
+      <Button color="limegreen">green</Button>
+      <Button color="rgb(139 92 246)">violet</Button>
     </div>
   );
 };
@@ -20,6 +23,9 @@ const App = () => {
     <div className="flex gap-4 flex-wrap">
       <Button color="default">Default</Button>
       <Button color="primary">Primary</Button>
+      <Button color="#ef4444">red</Button>
+      <Button color="limegreen">green</Button>
+      <Button color="rgb(139 92 246)">violet</Button>
     </div>
   );
 };
