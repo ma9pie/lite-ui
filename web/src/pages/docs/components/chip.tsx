@@ -43,7 +43,7 @@ const DocsComponentPage = () => {
                 property: 'color',
                 type: ['string'],
                 description: 'The color of the chip.',
-                defaultValue: '#a3a3a3',
+                defaultValue: '#d4d4d4',
               },
               {
                 property: 'radius',

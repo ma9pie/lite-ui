@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import Ripple from '@/components/common/Ripple';
 import { ButtonProps } from '@/types';
@@ -32,12 +32,13 @@ const RADIUS = {
   lg: '14px',
   full: '9999px',
 };
-const BACKGROUND_COLOR = {
-  default: 'var(--neutral500)',
+const BACKGROUND_COLOR: { [key: string]: string } = {
+  default: 'var(--neutral300)',
   primary: 'var(--blue500)',
 };
 
 const Button = ({
+  style,
   full = false,
   size = 'md',
   radius = 'md',
@@ -47,6 +48,29 @@ const Button = ({
   children,
   ...props
 }: ButtonProps) => {
+  const { minWidth, height, padding, fontSize } = useMemo(
+    () =>
+      getProperties({
+        defaultProp: 'md',
+        optionalProp: size,
+        obj: SIZE,
+      }),
+    [size]
+  );
+  const borderRadius = useMemo(
+    () =>
+      getProperties({
+        defaultProp: 'md',
+        optionalProp: radius,
+        obj: RADIUS,
+      }),
+    [radius]
+  );
+  const backgroundColor = useMemo(
+    () => BACKGROUND_COLOR[color] || color,
+    [color]
+  );
+
   return (
     <Wrapper
       full={full}
@@ -55,6 +79,16 @@ const Button = ({
       color={color}
       disabled={disabled}
       disableRipple={disableRipple}
+      style={{
+        minWidth: full ? '100%' : minWidth,
+        height,
+        padding,
+        fontSize,
+        borderRadius,
+        color: color === 'primary' ? 'white' : 'black',
+        backgroundColor,
+        ...style,
+      }}
       {...props}
     >
       {children}
@@ -68,7 +102,6 @@ export default Button;
 const Wrapper = styled.button<ButtonProps>`
   position: relative;
   width: fit-content;
-  color: white;
   border: none;
   transition-property: all;
   transition-timing-function: ease;
@@ -83,31 +116,4 @@ const Wrapper = styled.button<ButtonProps>`
     opacity: 0.5;
     cursor: default;
   }
-
-  ${(props) => {
-    const { minWidth, height, padding, fontSize } = getProperties({
-      defaultProp: 'md',
-      optionalProp: props.size,
-      obj: SIZE,
-    });
-    const radius = getProperties({
-      defaultProp: 'md',
-      optionalProp: props.radius,
-      obj: RADIUS,
-    });
-    const backgroundColor = getProperties({
-      defaultProp: 'default',
-      optionalProp: props.color,
-      obj: BACKGROUND_COLOR,
-    });
-
-    return `
-    min-width: ${props.full ? '100%' : minWidth};
-    height: ${height};
-    border-radius: ${radius};
-    padding: ${padding};
-    background-color: ${backgroundColor};
-    font-size: ${fontSize};
-    `;
-  }}
 `;

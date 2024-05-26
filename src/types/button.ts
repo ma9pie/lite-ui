@@ -4,7 +4,7 @@ import { DefaultProps } from '@/types';
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
 export type ButtonRadius = 'none' | 'sm' | 'md' | 'lg' | 'full';
-export type ButtonColor = 'default' | 'primary';
+export type ButtonColor = 'default' | 'primary' | string;
 
 export interface ButtonProps extends DefaultProps {
   full?: boolean;

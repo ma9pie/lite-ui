@@ -17,7 +17,9 @@ const Component = (props: ButtonProps) => {
   return (
     <Container>
       <Button {...props}>Button</Button>
-      <Button>Button</Button>
+      <Button color="default">Button</Button>
+      <Button color="primary">Button</Button>
+      <Button color="limegreen">Button</Button>
       <Button>ButtonButtonButtonButton</Button>
       <Button full>Button</Button>
     </Container>
