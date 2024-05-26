@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Text = ({ className, children }: Props) => {
-  return <p className={className}>{children}</p>;
+  return <Wrapper className={className}>{children}</Wrapper>;
 };
 
 const Title = styled(Text)`
@@ -26,3 +26,7 @@ Text.Title = Title;
 Text.SubTitle = SubTitle;
 
 export default Text;
+
+const Wrapper = styled.p`
+  ${tw`leading-5`};
+`;
