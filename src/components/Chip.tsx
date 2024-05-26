@@ -13,7 +13,7 @@ const SIZE_MAP = {
 const Chip = ({
   variant = 'filled',
   size = 'md',
-  color = 'var(--neutral400)',
+  color = 'var(--neutral300)',
   radius = 9999,
   children,
   ...props
